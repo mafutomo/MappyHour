@@ -13,13 +13,14 @@
 </head>
 
 <body>
-  <header>
+  <div class="grid">
+  <header class="header">
     <h1>SOZC</h1>
     <h2>EAT. DRINK. EXPLORE</h2>
   </header>
-  <content>
-    <form method="post">
-      <input type="text" name="u" placeholder="Username" required="required" class="login"/><br />
+  <content class="content">
+    <form method="post" class="signin">
+      <input type="text" name="u" placeholder="Email" required="required" class="login"/><br />
       <input type="password" name="p" placeholder="Password" required="required" class="login"/><br />
       <button type="submit" class="btn-primary">
         <span class="loginSubmit">
@@ -29,7 +30,7 @@
     </form>
 
   </content>
-
+  </div>
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
