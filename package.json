@@ -1,0 +1,26 @@
+{
+  "name": "Q2-Project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheRobQ/Q2-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheRobQ/Q2-Project/issues"
+  },
+  "homepage": "https://github.com/TheRobQ/Q2-Project#readme",
+  "dependencies": {
+    "knex": "^0.14.2"
+  }
+}
