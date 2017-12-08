@@ -7,7 +7,8 @@ With Socz you can view Boulder Happy Hour deals through our interactive map and 
 ###### Trello Board: https://trello.com/b/bJ0Vzl8q/g68q2melissa-is-the-best
 
 ###### Wireframe:
-![Alt text](/README_images/wireframe.png?raw=true)
+![Alt text](/README_images/wireframe1.png?raw=true)
+![Alt text](/README_images/wireframe2.png?raw=true)
 
 ###### ERD:
 ![Alt text](/README_images/ERD.png?raw=true)
