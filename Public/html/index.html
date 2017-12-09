@@ -16,12 +16,12 @@
   <div class="grid">
   <header class="header">
     <h1>SOZC</h1>
-    <h2>EAT. DRINK. EXPLORE</h2>
+    <h2>EAT. DRINK. EXPLORE. </h2>
   </header>
   <content class="content">
     <form method="post" class="signin">
-      <input type="text" name="u" placeholder="Email" required="required" class="login"/><br />
-      <input type="password" name="p" placeholder="Password" required="required" class="login"/><br />
+      <input type="text" name="u" placeholder="Email" required="required" class="login" id="user"/><br />
+      <input type="password" name="p" placeholder="Password" required="required" class="login" id="pass"/><br />
       <button type="submit" class="btn-primary">
         <span class="loginSubmit">
           Let's get drinks
@@ -34,6 +34,8 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.min.js">
   </script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
 </body>
