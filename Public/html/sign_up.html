@@ -5,26 +5,40 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SOZC</title>
+  <title>Sign Up</title>
   <link rel="stylesheet" href="../css/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Oswald:600" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
 </head>
 
-<body class="background-login">
+<body class="background-sign_up">
   <div class="grid">
   <header class="header">
-    <h1 class="heading">SOZC</h1>
-    <h2 class="sub-heading">EAT. DRINK. EXPLORE.</h2>
+    <h1 class="heading">sign up</h1>
+
   </header>
   <content class="content">
-    <form method="post" class="signin">
-      <input type="text" placeholder="Email" required="required" class="input"/><br />
-      <input type="password" placeholder="Password" required="required" class="input"/><br />
+    <form method="post" class="signup">
+
+      <label for="firstName">First Name</label>
+      <input type="text" placeholder="First Name" required="required" class="input" id="firstName"/><br />
+
+      <label for="firstName">Last Name</label>
+      <input type="text" placeholder="Last Name" required="required" class="input" id="lastName"/><br />
+
+      <label for="email">Email</label>
+      <input type="text" placeholder="Email" required="required" class="input" id="email"/><br />
+
+      <label for="password">Password</label>
+      <input type="password" placeholder="Password" required="required" class="input" id="password"/><br />
+
+      <label for="passwordConfirm">Password</label>
+      <input type="password" placeholder="Confirm Password" required="required" class="input" id="passwordConfirm"/><br />
+
       <button type="submit" class="btn-primary">
         <span class="submitPage">
-          Let's get drinks
+          Submit
         </span>
       </button>
     </form>
@@ -34,8 +48,6 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.min.js">
   </script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
 </body>
