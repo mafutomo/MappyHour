@@ -12,6 +12,9 @@ app.listen(port, ()=>{
   console.log(`you are now tunned to ${port} "the bees knees"`)
 })
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }))
+
 app.use('/', router)
 app.use((req,res,sendit)=>{
   res.sendStatus(506)
