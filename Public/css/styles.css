@@ -6,7 +6,10 @@
   "header header header"
   "content content content"
 }*/
-
+#map{
+height: 700px;
+width: 100%;
+}
 .sub-heading{
   font-family: 'Comfortaa', cursive;
   font-weight: bold;
