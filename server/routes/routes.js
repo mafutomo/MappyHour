@@ -10,7 +10,12 @@ router.get('/restaurants/',(req,res,sendit)=>{
   })
 })
 router.get('/restaurants/:name', (req,res,sendit)=>{
-  res.sendStatus(200)
+  knex('restraunts').where({
+    name: req.params.name
+  }).first()
+  .then(restraunt=>{
+    res.status(200).send(restraunt)
+  })
 })
 router.get('/favorites/:id', (req,res,sendit)=>{
   res.sendStatus(200)
