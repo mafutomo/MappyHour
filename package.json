@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/TheRobQ/Q2-Project#readme",
   "dependencies": {
+    "axios": "^0.17.1",
     "bcrypt": "^1.0.3",
     "knex": "^0.14.2",
     "pg": "^7.4.0"
