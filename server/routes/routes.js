@@ -4,6 +4,12 @@ const knex = require('../knex')
 const bcrypt = require('bcrypt');
 const bodyParser = require('body-parser')
 
+router.use(express.static('public'))
+
+router.use('/', function (req, res, next) {
+  res.send('hello there 2')
+})
+
 router.get('/restaurants/',(req,res,sendit)=>{
     knex('restaurants').then(data=>{
     res.status(200).send(data)

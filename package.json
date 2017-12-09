@@ -2,13 +2,13 @@
   "name": "Q2-Project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "directories": {
     "test": "tests"
   },
   "scripts": {
     "test": "mocha tests/routestests.js",
-    "devstart": "nodemon ./server/server.js"
+    "devstart": "nodemon server.js"
   },
   "repository": {
     "type": "git",

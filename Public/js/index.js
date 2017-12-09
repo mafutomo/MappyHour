@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-const baseURL = 'http://localhost:3000'
+const baseURL = 'http://localhost:8062'
 
 $(".signin").submit(function(event) {
   event.preventDefault();
@@ -14,8 +14,8 @@ $(".signin").submit(function(event) {
     password: password
   },
   success: function (data) {
-                            console.log(data);
-                        }
+  console.log(data)
+ }
 })
   //console.log(data);
   console.log(username);
