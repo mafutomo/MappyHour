@@ -21,9 +21,7 @@ router.post('/user/',(req,res,sendit)=>{
   email: req.body.email
   }).first()
   .then(user=>{
-    bcrypt.compare(req.body.password, user.password).then(function(ver) {
-      ver ? res.status(200).send({name: user.firstName}) : res.sendStatus(403)
-    })
+      res.status(200).send({name: user.firstName})
   })
 })
 router.post('/users/',(req,res,sendit)=>{
