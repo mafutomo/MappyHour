@@ -2,12 +2,22 @@
 
 const express = require('express')
 const app = express()
-const port = process.env.PORT || 5432
-
+const port = process.env.PORT || '5432'
+const router = require('./routes/routes.js')
+const bodyParser = require('body-parser')
+// body parser
+// cookie parser at some point
 
 app.listen(port, ()=>{
-  `you are now tunned to ${port} "the bees knees"`
+  console.log(`you are now tunned to ${port} "the bees knees"`)
 })
+
+app.use('/', router)
+app.use((req,res,sendit)=>{
+  res.sendStatus(506)
+})
+
+
 
 
 module.exports = app;

@@ -7,7 +7,8 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests/routestests.js",
+    "devstart": "nodemon ./server/server.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,12 @@
   "dependencies": {
     "axios": "^0.17.1",
     "bcrypt": "^1.0.3",
+    "express": "^4.16.2",
     "knex": "^0.14.2",
+    "mocha": "^4.0.1",
     "pg": "^7.4.0"
+  },
+  "devDependencies": {
+    "supertest": "^3.0.0"
   }
 }
