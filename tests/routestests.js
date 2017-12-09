@@ -15,11 +15,12 @@ describe('GET /restraunts', function() {
       });
   });
 });
-describe('GET /users', function() {
+describe('GET /user', function() {
   it('respond with json', function(done) {
     request(server)
-      .get('/users')
+      .get('/user')
       .set('Accept', 'application/json')
+      .send({email:'schroder.brent@gmail.com', password: 'supdogmex'})
       .expect(200)
       .end(function(err, res) {
         if (err) return done(err);
