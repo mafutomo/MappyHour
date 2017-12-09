@@ -2,6 +2,7 @@ const assert = require('assert')
 const routes = require('../server/routes/routes.js')
 const request = require('supertest')
 const server = require('../server/server.js')
+//const { addDatabaseHooks } = require('./utils')
 
 describe('GET /restraunts', function() {
   it('respond with json', function(done) {
@@ -15,10 +16,10 @@ describe('GET /restraunts', function() {
       });
   });
 });
-describe('GET /user', function() {
+describe('POST /user', function() {
   it('respond with json', function(done) {
     request(server)
-      .get('/user')
+      .post('/user')
       .set('Accept', 'application/json')
       .send({email:'schroder.brent@gmail.com', password: 'supdogmex'})
       .expect(200)
