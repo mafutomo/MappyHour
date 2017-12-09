@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  const baseURL = 'http://localhost:3000'
+const baseURL = 'http://localhost:3000'
 
 $(".signin").submit(function(event) {
   event.preventDefault();
