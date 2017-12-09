@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests/routestests.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,12 @@
   "homepage": "https://github.com/TheRobQ/Q2-Project#readme",
   "dependencies": {
     "bcrypt": "^1.0.3",
+    "express": "^4.16.2",
     "knex": "^0.14.2",
+    "mocha": "^4.0.1",
     "pg": "^7.4.0"
+  },
+  "devDependencies": {
+    "supertest": "^3.0.0"
   }
 }
