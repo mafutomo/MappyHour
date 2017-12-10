@@ -9,13 +9,13 @@ $(".signin").submit(function(event) {
   const password = $("input#pass").val();
   $.ajax({
   url:   `${baseURL}/user/${username}`,
-  data: {
+    data: {
     user: username,
     password: password
   },
   success: function (data) {
-                            console.log(data);
-                        }
+    console.log(data);
+  }
 })
   //console.log(data);
   console.log(username);
