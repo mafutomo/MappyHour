@@ -20,6 +20,7 @@ width: 100%;
 
 .text-label{
   font-family: 'Comfortaa', cursive;
+  color: #fff
   /*font-size: 90%;*/
 }
 
@@ -60,16 +61,17 @@ p{
 }
 
 .input {
-  background-color: white;
-  border-color: #4CABEA;
+  background-color: rgba(255,255,255,.7);
+  /*border-color: #4CABEA;*/
   border-width: 2px;
-  border-style: solid;
+  border-style: none;
   border-radius: 22px;
+  margin-top: 5px;
   margin-bottom: 24px;
   align-items: center;
-  box-shadow: 2px 2px 8px #413F3F;
+  /*box-shadow: 2px 2px 8px #413F3F;*/
   width: 250px;
-  height:40px;
+  height:25px;
   padding: 5px;
   font-family: 'Open Sans', sans-serif;
 }
@@ -89,8 +91,11 @@ p{
 }
 
 .btn-primary {
+    height:40px;
+    margin-top: 10px;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.5s;
+
 }
 
 .btn-primary:hover {
@@ -111,10 +116,14 @@ p{
   margin-left: 10%;
   margin-right:10%;
   margin-top: 70%;
+
 }
+
+
 
 .signup{
   margin-left: 10%;
   margin-right:10%;
   margin-top: -6%;
+
 }
