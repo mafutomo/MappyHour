@@ -21,7 +21,6 @@ router.get('/favorites/:id', (req,res,sendit)=>{
   res.sendStatus(200)
 })
 router.post('/user/',(req,res,sendit)=>{
-  console.log(req.body)
   knex('users').where({
   email: req.body.email
   }).first()
