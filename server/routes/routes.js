@@ -6,32 +6,44 @@ const bodyParser = require('body-parser')
 
 router.use(express.static('public'))
 
-router.use('/', function (req, res, next) {
-  res.send('hello there 2')
-})
-
 router.get('/restaurants/',(req,res,sendit)=>{
     knex('restaurants').then(data=>{
     res.status(200).send(data)
   })
 })
-router.get('/user/',(req,res,sendit)=>{
-  console.log(req.body)
-  knex('users').where({
-  email: req.body
+router.get('/restaurants/:name', (req,res,sendit)=>{
+  knex('restaurants').where({
+    name: req.params.name
   }).first()
-  .then(user=>{
-    bcrypt.compare(req.body.password, user.password).then(function(ver) {
-      ver ? res.status(200).Status({name: user.firstName}) : res.sendStatus(403)
-    })
+  .then(restraunt=>{
+    res.status(200).send(restraunt)
   })
 })
-// router.get('/restaurants/:name', (req,res,sendit)=>{
-//
-// })
-// router.post('/users/',(req,res,sendit)=>{
-//
-// })
-// router.get('/')
+router.get('/favorites/:id', (req,res,sendit)=>{
+  res.sendStatus(200)
+})
+router.post('/user/',(req,res,sendit)=>{
+  knex('users').where({
+  email: req.body.email
+  }).first()
+  .then(user=>{
+      res.status(201).send({name: user.firstName})
+  })
+})
+router.post('/users/',(req,res,sendit)=>{
+  res.sendStatus(201)
+})
+router.post('/favorites/', (req,res,sendit)=>{
+  res.sendStatus(201)
+})
+router.delete('/favorites/:id', (req,res,sendit)=>{
+  if (!req.params.id) res.sendStatus(404)
+  knex('favorites').where({id: req.params.id}).del().then(
+    res.sendStatus(200)
+  )
+})
+router.put('/favorites/', (req,res,sendit)=>{
+  res.sendStatus(200)
+})
 
 module.exports = router

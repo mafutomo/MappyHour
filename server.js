@@ -13,6 +13,13 @@ app.get('/', function (req, res, next) {
   res.send('Hello There')
 })
 
+<<<<<<< HEAD:server.js
+=======
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }))
+
+app.use('/', router)
+>>>>>>> b49840520cafca2d63577c57cb5da9d1543843d7:server/server.js
 app.use((req,res,sendit)=>{
   res.sendStatus(506)
 })
