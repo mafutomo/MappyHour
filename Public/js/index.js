@@ -8,16 +8,16 @@ $(".signin").submit(function(event) {
   const username = $("input#user").val();
   const password = $("input#pass").val();
   $.ajax({
-  url:   `${baseURL}/user/${username}`,
+  url:   `${baseURL}/user/`,
     data: {
-    user: username,
-    password: password
+    email: username,
+    //password: password
   },
   success: function (data) {
-  //console.log(data);
-  console.log(username);
-  console.log(password);
+  if(data === "ok"){
+window.location.href = "map.html"  }
+}
 })
 
-
   });
+})
