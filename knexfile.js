@@ -1,22 +1,22 @@
 module.exports = {
   test:{
     client: 'pg',
-    connection: `postgres://localhost:5432/sozc_test`,
+    connection: `postgres://localhost:3000/sozc_test`,
     migrations: {
-      directory: './migrations'
+      directory: './server/migrations'
     },
     seeds: {
-      directory: './seeds'
+      directory: './server/seeds'
     }
   },
   development: {
     client: 'pg',
-    connection: `postgres://localhost:5432/sozc_dev`,
+    connection: `postgres://localhost:3000/sozc_dev`,
     migrations: {
-      directory: './migrations'
+      directory: './server/migrations'
     },
     seeds: {
-      directory: './seeds'
+      directory: './server/seeds'
     }
   },
   production: {

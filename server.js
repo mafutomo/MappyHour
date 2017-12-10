@@ -2,13 +2,13 @@
 const express = require('express')
 const app = express()
 const port = process.env.PORT || '3000'
-const router = require('./routes/routes.js')
+const router = require('./server/routes/routes.js')
 const bodyParser = require('body-parser')
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 // body parser
 // cookie parser at some point
-app.use(express.static('../public'))
+app.use(express.static('public'))
 
 app.use('/', router)
 

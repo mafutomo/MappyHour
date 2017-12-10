@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-const baseURL = 'http://localhost:8062'
+const baseURL = 'http://localhost:3000'
 
 $(".signin").submit(function(event) {
   event.preventDefault();
@@ -10,7 +10,7 @@ $(".signin").submit(function(event) {
   $.ajax({
   url:   `${baseURL}/user/`,
     data: {
-    email: username,
+    user: username,
     //password: password
   },
   success: function (data) {
