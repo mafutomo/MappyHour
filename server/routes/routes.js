@@ -5,13 +5,11 @@ const bcrypt = require('bcrypt');
 const bodyParser = require('body-parser')
 
 router.get('/restaurants/',(req,res,sendit)=>{
-  console.log('not name');
     knex('restaurants').then(data=>{
     res.status(200).send(data)
   })
 })
 router.get('/restaurants/:name', (req,res,sendit)=>{
-  console.log('name');
   knex('restaurants').where({
     name: req.params.name
   }).first()
