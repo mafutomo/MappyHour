@@ -26,16 +26,16 @@ router.post('/user/',(req,res,sendit)=>{
   email: req.body.email
   }).first()
   .then(user=>{
-      res.status(200).send({name: user.firstName})
+      res.status(201).send({name: user.firstName})
   })
 })
 router.post('/users/',(req,res,sendit)=>{
-  res.sendStatus(202)
+  res.sendStatus(201)
 })
 router.post('/favorites/', (req,res,sendit)=>{
-  res.sendStatus(200)
+  res.sendStatus(201)
 })
-router.delete('/favorite/:id', (req,res,sendit)=>{
+router.delete('/favorites/:id', (req,res,sendit)=>{
   res.sendStatus(200)
 })
 router.put('/favorites/', (req,res,sendit)=>{
