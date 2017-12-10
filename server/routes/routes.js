@@ -8,7 +8,7 @@ router.use(express.static('public'))
 
 router.post('/user/',(req,res,sendit)=>{
   console.log(req.body);
-      res.sendStatus(200)
+      res.sendStatus(401)
   })
 
 

@@ -12,12 +12,18 @@ $(document).ready(function() {
       type: 'POST',
       data: {
         email: username,
-        //password: password
+        password: password
       },
       success: function(data) {
         console.log(data);
         if (data == "OK") {
           window.location.href = `${baseURL}/map.html`
+        }
+      },
+      error: function(data){
+        console.log(data);
+        if (data.statustext === "unauthorized"){
+          Materialize.toast('Please check your user name and / or password and try again', 4000)
         }
       }
     })
