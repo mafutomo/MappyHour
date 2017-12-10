@@ -5,12 +5,14 @@ const bcrypt = require('bcrypt');
 const bodyParser = require('body-parser')
 
 router.get('/restaurants/',(req,res,sendit)=>{
+  console.log('not name');
     knex('restaurants').then(data=>{
     res.status(200).send(data)
   })
 })
 router.get('/restaurants/:name', (req,res,sendit)=>{
-  knex('restraunts').where({
+  console.log('name');
+  knex('restaurants').where({
     name: req.params.name
   }).first()
   .then(restraunt=>{
@@ -36,7 +38,10 @@ router.post('/favorites/', (req,res,sendit)=>{
   res.sendStatus(201)
 })
 router.delete('/favorites/:id', (req,res,sendit)=>{
-  res.sendStatus(200)
+  if (!req.params.id) res.sendStatus(404)
+  knex('favorites').where({id: req.params.id}).del().then(
+    res.sendStatus(200)
+  )
 })
 router.put('/favorites/', (req,res,sendit)=>{
   res.sendStatus(200)

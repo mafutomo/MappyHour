@@ -19,9 +19,8 @@ describe('GET /restaurnts', function() {
 describe('GET /restraunts/:name', function() {
   it('respond with json', function(done) {
     request(server)
-      .get('/restaurants')
+      .get('/restaurants/Bohemian Biergarten')
       .set('Accept', 'application/json')
-      .query({name: 'Bohemian Biergarten'})
       .expect(200)
       .end(function(err, res) {
         if (err) return done(err);
@@ -81,10 +80,9 @@ describe('POST /favorites/', function() {
 describe('DELETE /favorites/:id', function() {
   it('respond with json', function(done) {
     request(server)
-      .delete('/favorites/')
-      .query({id: 2})
+      .delete('/favorites/2')
       .set('Accept', 'application/json')
-      .expect(201)
+      .expect(200)
       .end(function(err, res) {
         if (err) return done(err);
         done();
