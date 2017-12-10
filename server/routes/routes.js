@@ -3,6 +3,7 @@ const router = express.Router()
 const knex = require('../knex')
 const bcrypt = require('bcrypt');
 const bodyParser = require('body-parser')
+const cryptic = require('../queries/bcrypt.js')
 
 router.get('/restaurants/',(req,res,sendit)=>{
     knex('restaurants').then(data=>{
@@ -20,14 +21,7 @@ router.get('/restaurants/:name', (req,res,sendit)=>{
 router.get('/favorites/:id', (req,res,sendit)=>{
   res.sendStatus(200)
 })
-router.post('/user/',(req,res,sendit)=>{
-  knex('users').where({
-  email: req.body.email
-  }).first()
-  .then(user=>{
-      res.status(201).send({name: user.firstName})
-  })
-})
+router.post('/user/',cryptic.compare)
 router.post('/users/',(req,res,sendit)=>{
   res.sendStatus(201)
 })
