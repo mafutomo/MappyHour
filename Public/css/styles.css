@@ -10,6 +10,11 @@
 height: 700px;
 width: 100%;
 }
+#card{
+  height: 200px;
+  width: 100%;
+  background-color: green;
+}
 .sub-heading{
   font-family: 'Comfortaa', cursive;
   font-weight: bold;
@@ -118,3 +123,4 @@ p{
   margin-right:10%;
   margin-top: -6%;
 }
+
