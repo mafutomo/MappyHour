@@ -56,6 +56,14 @@ p{
   text-shadow: 2px 2px 8px #413F3F;
 }
 
+.brand-logo {
+  font-family: 'Hammersmith One';
+}
+
+li{
+  font-family: 'Open Sans', sans-serif;
+}
+
 .heading_sign_up{
   margin-top: 5px;
   color: #E89A3C;
@@ -130,4 +138,3 @@ p{
   margin-top: -6%;
 
 }
-

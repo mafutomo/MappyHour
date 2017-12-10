@@ -5,7 +5,7 @@ module.exports = {
     client: 'pg',
     connection: 'postgres://localhost/sozc_dev',
     migration: {
-      connection: './migrations'
+      connection: './server/migrations'
     },
     seed: {
       connection: './seeds'
@@ -14,7 +14,7 @@ module.exports = {
 
   test: {
     client: 'pg',
-    connection: 'postgres://localhost/sozc_dev',
+    connection: 'postgres://localhost/sozc_test',
     migration: {
       connection: './migrations'
     },
