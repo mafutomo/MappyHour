@@ -10,9 +10,14 @@ router.use(express.static('public'))
 router.post('/user/',(req,res,sendit)=>{
   console.log(req.body.email);
   console.log(req.body.password);
-  let email = req.body.email;
-  let pass = req.body.password;
-      res.status(200).send()
+  knex('users').where({
+    email: req.body.email
+    }).first()
+    .then(user=>{
+      bcrypt.compare(req.body.password, user.password, function(err, ver) {
+          ver ? res.status(200).send({id:user.id}) : res.sendStatus(401)
+      })
+    })
 }
 
 // router.post('/user/',(req,res,sendit)=>{
