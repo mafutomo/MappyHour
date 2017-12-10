@@ -3,6 +3,7 @@ const router = express.Router()
 const knex = require('../../knex.js')
 const bcrypt = require('bcrypt');
 const bodyParser = require('body-parser')
+const queries = require('../queries/queries')
 
 router.use(express.static('public'))
 
@@ -11,10 +12,7 @@ router.post('/user/',(req,res,sendit)=>{
   console.log(req.body.password);
   let email = req.body.email;
   let pass = req.body.password;
-  return knex('users').where({email: email}).first()
-  .then(
       res.status(200).send()
-  )}
 }
 
 // router.post('/user/',(req,res,sendit)=>{
@@ -26,20 +24,9 @@ router.post('/user/',(req,res,sendit)=>{
 //   })
 // })
 
-router.get('/restaurants/',(req,res,sendit)=>{
-    knex('restaurants').then(data=>{
-    res.status(200).send(data)
-  })
-})
+router.get('/restaurants/',queries.getRestaurants)
 
-router.get('/restaurants/:name', (req,res,sendit)=>{
-  knex('restaurants').where({
-    name: req.params.name
-  }).first()
-  .then(restraunt=>{
-    res.status(200).send(restraunt)
-  })
-})
+router.get('/restaurants/:name', queries.getRestaurantsName)
 
 router.get('/favorites/:id', (req,res,sendit)=>{
   res.sendStatus(200)
@@ -47,7 +34,7 @@ router.get('/favorites/:id', (req,res,sendit)=>{
 
 router.post('/users/',(req,res,sendit)=>{
   res.sendStatus(201)
-})
+})//no touchy
 
 router.post('/favorites/', (req,res,sendit)=>{
   res.sendStatus(201)
