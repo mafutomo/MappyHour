@@ -1,26 +1,30 @@
+'use strict';
+
 module.exports = {
-  test:{
-    client: 'pg',
-    connection: `postgres://localhost:3000/sozc_test`,
-    migrations: {
-      directory: './server/migrations'
-    },
-    seeds: {
-      directory: './server/seeds'
-    }
-  },
   development: {
     client: 'pg',
-    connection: `postgres://localhost:3000/sozc_dev`,
-    migrations: {
-      directory: './server/migrations'
+    connection: 'postgres://localhost/sozc_dev',
+    migration: {
+      connection: './migrations'
     },
-    seeds: {
-      directory: './server/seeds'
+    seed: {
+      connection: './seeds'
     }
   },
+
+  test: {
+    client: 'pg',
+    connection: 'postgres://localhost/sozc_dev',
+    migration: {
+      connection: './migrations'
+    },
+    seed: {
+      connection: './seeds'
+    }
+  },
+
   production: {
     client: 'pg',
     connection: process.env.DATABASE_URL
   }
-}
+};

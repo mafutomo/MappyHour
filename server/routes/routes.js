@@ -6,8 +6,9 @@ const bodyParser = require('body-parser')
 
 router.use(express.static('public'))
 
-router.post('/user/:user',(req,res,sendit)=>{
-      res.status(200).send({name: user.firstName})
+router.post('/user/',(req,res,sendit)=>{
+  console.log(req.body);
+      res.sendStatus(200)
   })
 
 
