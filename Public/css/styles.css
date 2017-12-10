@@ -45,6 +45,10 @@ p{
 
 }
 
+.background-subtle{
+  background-image: url('../img/swirl.png');
+}
+
 .heading{
   margin-top: -10px;
   color: #E89A3C;
