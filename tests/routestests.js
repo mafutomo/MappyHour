@@ -1,7 +1,8 @@
 const assert = require('assert')
 const routes = require('../server/routes/routes.js')
 const request = require('supertest')
-const server = require('../server/server.js')
+const server = require('../server.js')
+const bcrypt = require('bcrypt')
 //const { addDatabaseHooks } = require('./utils')
 
 describe('GET /restaurnts', function() {
@@ -45,8 +46,8 @@ describe('POST /user', function() {
     request(server)
       .post('/user')
       .set('Accept', 'application/json')
-      .send({email:'schroder.brent@gmail.com', password: 'supdogmex'})
-      .expect(201)
+      .send({email:'schroder.brent@gmail.com', password: 'supd'})
+      .expect(200)
       .end(function(err, res) {
         if (err) return done(err);
         done();

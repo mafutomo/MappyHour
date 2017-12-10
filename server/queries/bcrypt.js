@@ -1,6 +1,9 @@
-const knex = require('../knex')
+const express = require('express')
+const router = express.Router()
+const knex = require('../../knex')
 const bcrypt = require('bcrypt');
 const bodyParser = require('body-parser')
+
 
 const store = (req,res,sendit)=>{
   var salt = bcrypt.genSaltSync(4)
@@ -20,8 +23,9 @@ const compare = (req,res,sendit)=>{
   email: req.body.email
   }).first()
   .then(user=>{
-    var hash = bcrypt.hashSync(req.body.password, salt)
-    (hash == user.password) ? res.sendStatus(200) : res.sendStatus(401)
+    bcrypt.compare(req.body.password, user.password, function(err, ver) {
+        ver ? res.status(200).send({id:user.id}) : res.sendStatus(401)
+    })
   })
 }
 module.exports = {
