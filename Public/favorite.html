@@ -1,85 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Sozc</title>
-        <link href="../css/main.css" rel="stylesheet">
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-        <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
-        <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
-    </head>
-    <body>
-        <!-- Navbar -->
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="./index.html">Brand</a>
-                </div>
-            
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li><a href="./login.html">Log In</a></li>
-                    <li><a href="./favorite.html">Favorites</a></li>
-                </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
-            <!--End Navbar -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>SOZC</title>
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Oswald:600" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+      <!-- Materialize Icons -->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-          <!-- Header -->
-            <Header id="header_favorite" class="container-fluid colorOne">
-              <div class="row">
-                <div class="col-md-4">
-                </div>
-                <div class="col-md-4 text-center pad">
-                    <h1>Favorites</h1>
-                </div>
-                <div class="col-md-4 text-center pad">
-                </div>
-              </div>
-            </Header>
-          <!-- End Header -->
-          <!-- List View  -->
-            <div  class="container-fluid list">
-                <div class="row">
-                    <div class="col-md-4"><img src="../img/200.png"></div>
-                    <div class="col-md-8">
-                        <p>
-                            The Town of Carbondale is a Home Rule Municipality in Garfield County, Colorado, 
-                            United States. The town population was 6427 at the 2010 United States Census. 
-                            The town is located in the Roaring Fork Valley, downstream from Aspen and upstream 
-                            from the mouth of the Roaring Fork River
-                        </p>
-                    </div>
-                </div>
-            </div>
-          <!-- List View End  -->
-          <!-- Footer -->
-            <footer class="container-fluid colorOne">
-                <div class="row">
-                  <div class="col-md-4">
-                  </div>
-                  <div class="col-md-4 text-center pad">
-                      <h3>Footer</h3>
-                  </div>
-                  <div class="col-md-4 text-center pad">
-                  </div>
-                </div>
-            </Footer>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+      <!-- Materialize -->
+      <!-- Compiled and minified CSS -->
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+      <!-- Compiled and minified JavaScript -->
+
+
+      <!-- Custom Stylesheet and Javascript -->
+      <link rel="stylesheet" href="./css/styles.css">
+
+    </head>
+    <body class="background-subtle">
+
+        <!-- Navbar -->
+        <nav style="background-color: #f57c00;">
+        <div class="nav-wrapper" >
+        <a href="#!" class="brand-logo">SOZC</a>
+
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">View Map</a></li>
+          <li><a href="#">Log Out</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="#">View Map</a></li>
+          <li><a href="#">Log Out</a></li>
+        </ul>
+        </div>
+        </nav>
+
+        <!--End Navbar -->
+
+        <h2 class='sub-heading'>My Favorites</h2>
+
+  <div class="container">
+    <div class="col s12 m6">
+
+      <div class="card horizontal">
+        <div class="card-image">
+          <img src="https://lorempixel.com/100/190/nature/6">
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <p>I am a very simple card. I am good at containing small bits of information.</p>
+          </div>
+          <div class="card-action">
+            <a href="#">Remove</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 m6">
+
+      <div class="card horizontal">
+        <div class="card-image">
+          <img src="https://lorempixel.com/100/190/nature/6">
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <p>I am a very simple card. I am good at containing small bits of information.</p>
+          </div>
+          <div class="card-action">
+            <a href="#">Remove</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  </div>
+
+</div>
+
+
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
+        <script src="./js/styles.js"></script>
+        <script src="./js/favorite.js"></script>
+        <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     </body>
 </html>

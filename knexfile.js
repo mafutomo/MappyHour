@@ -12,7 +12,7 @@ module.exports = {
   },
   test: {
     client: 'pg',
-    connection: 'postgres://localhost/sozc_dev',
+    connection: 'postgres://localhost/sozc_test',
     migration: {
       connection: './migrations'
     },
@@ -20,6 +20,7 @@ module.exports = {
       connection: './seeds'
     }
   },
+
   production: {
     client: 'pg',
     connection: process.env.DATABASE_URL
