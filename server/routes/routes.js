@@ -7,10 +7,15 @@ const bodyParser = require('body-parser')
 router.use(express.static('public'))
 
 router.post('/user/',(req,res,sendit)=>{
-  console.log(req.body);
-      res.sendStatus(401)
-  })
-
+  console.log(req.body.email);
+  console.log(req.body.password);
+  let email = req.body.email;
+  let pass = req.body.password;
+  return knex('users').where({email: email}).first()
+  .then(
+      res.status(200).send()
+  )}
+}
 
 // router.post('/user/',(req,res,sendit)=>{
 //   knex('users').where({

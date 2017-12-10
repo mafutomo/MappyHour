@@ -16,15 +16,13 @@ $(document).ready(function() {
       },
       success: function(data) {
         console.log(data);
-        if (data == "OK") {
+      //  if (data == "OK") {
           window.location.href = `${baseURL}/map.html`
-        }
+        //}
       },
       error: function(data){
         console.log(data);
-        if (data.statustext === "unauthorized"){
-          Materialize.toast('Please check your user name and / or password and try again', 4000)
-        }
+          Materialize.toast('Please check your user name and / or password and try again', 6000)
       }
     })
 
