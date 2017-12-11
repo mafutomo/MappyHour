@@ -14,6 +14,10 @@ router.get('/restaurants/:name', queries.getRestaurantsName)
 router.get('/favorites/:id', (req,res,sendit)=>{
   res.sendStatus(200)
 })
+router.get('/restraunts/', (req,res,sendit)=>{
+  knex('restaurants').then(data=>{
+  res.status(200).send(data)
+})
 router.post('/user/',cryptic.compare)
 
 router.post('/users/',(req,res,sendit)=>{
