@@ -15,7 +15,8 @@ const store = (req,res,sendit)=>{
     password:hash,
     salt:salt
   }).then(user=>{
-      res.status(201).send({name: user.firstName})
+    console.log(user);
+    res.status(204).send({name: user.firstName})
   })
 }
 const compare = (req,res,sendit)=>{
