@@ -1,11 +1,11 @@
 $(document).ready(function() {
 
-  const baseURL = 'http://localhost:3000'
+  const baseURL = 'http://localhost:3001'
 
   $(".signin").submit(function(event) {
     event.preventDefault();
     console.log('clicked');
-    const username = $("input#user").val();
+    const username = $("input#user").val().toLowerCase();
     const password = $("input#pass").val();
     $.ajax({
       url: `${baseURL}/user/`,
@@ -15,6 +15,7 @@ $(document).ready(function() {
         password: password
       },
       success: function(data) {
+        console.log(data);
         localStorage.setItem("user", data.id)
         window.location.href = "map.html"
       },
