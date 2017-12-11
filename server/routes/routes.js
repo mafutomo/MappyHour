@@ -30,8 +30,6 @@ router.delete('/favorites/:id', (req,res,sendit)=>{
   )
 })
 
-router.put('/favorites/', (req,res,sendit)=>{
-  res.sendStatus(200)
-})
+router.put('/favorites/',queries.putFavorites)
 
 module.exports = router

@@ -55,7 +55,7 @@ describe('POST /user', function() {
   });
 });
 describe('POST /users/', function() {
-  it('respond with json', function(done) {
+  xit('respond with json', function(done) {
     request(server)
       .post('/users/')
       .set('Accept', 'application/json')
@@ -89,6 +89,22 @@ describe('DELETE /favorites/:id', function() {
     request(server)
       .delete('/favorites/2')
       .set('Accept', 'application/json')
+      .expect(200)
+      .end(function(err, res) {
+        if (err) return done(err);
+        done();
+      });
+  });
+});
+describe('PUT /favorites/', function() {
+  it('respond with json', function(done) {
+    request(server)
+      .put('/favorites/')
+      .set('Accept', 'application/json')
+      .send({
+        userId:4,
+        restId:2,
+        rating:0})
       .expect(200)
       .end(function(err, res) {
         if (err) return done(err);
