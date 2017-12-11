@@ -16,9 +16,7 @@ $(document).ready(function() {
       },
       success: function(data) {
         console.log(data);
-      //  if (data == "OK") {
           window.location.href = `${baseURL}/map.html`
-        //}
       },
       error: function(data){
         console.log(data);
