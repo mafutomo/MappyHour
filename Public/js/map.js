@@ -46,13 +46,13 @@ var boulderLocations = [
     },
 ];
 
-var $xhr = $.getJSON('http://localhost:3001/restraunts');
-$xhr.done(function(data) {
-    if ($xhr.status !== 200) {
-        return;
-    }
-    console.log(data)
-})
+// var $xhr = $.getJSON('http://localhost:3001/restaurants');
+// $xhr.done(function(data) {
+//     if ($xhr.status !== 200) {
+//         return;
+//     }
+//     console.log(data)
+// })
 
 const name = boulderLocations.find(ele =>{
     return {lat: ele.lat, lng: ele.lng}
