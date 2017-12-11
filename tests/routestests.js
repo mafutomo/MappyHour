@@ -32,7 +32,7 @@ describe('GET /restraunts/:name', function() {
 describe('GET /favorites/:id', function() {
   it('respond with json', function(done) {
     request(server)
-      .get('/favorites/id=1')
+      .get('/favorites/id=1') //must update manually
       .set('Accept', 'application/json')
       .expect(200)
       .end(function(err, res) {

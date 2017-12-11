@@ -7,7 +7,7 @@ const router = require('./server/routes/routes.js')
 const bodyParser = require('body-parser')
 // body parser
 // cookie parser at some point
-
+app.use(express.static('public'))
 app.listen(port, ()=>{
   console.log(`you are now tunned to ${port} "the bees knees"`)
 })
