@@ -1,0 +1,39 @@
+html {
+    font-family: 'Open Sans', sans-serif, 'Comfortaa', cursive;
+  }
+
+h5{
+  font-family: 'Comfortaa', cursive;
+  font-weight:bold;
+  font-size: 110%;
+  text-align: center;
+  margin-top: 12px !important;
+}
+
+
+p{
+  font-family: 'Open Sans', sans-serif;
+  text-align: left;
+}
+
+.card-image{
+  clear:left;
+  /*margin-top:-12px;*/
+  margin-right:3px;
+  margin-left: 3px;
+  margin-bottom: 1px;
+}
+
+.card-stacked{
+  padding-top: 3px;
+}
+
+.card-action{
+  background-color: #f57c00 !important;
+}
+
+.remove{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  color: white !important;
+}
