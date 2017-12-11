@@ -7,23 +7,26 @@ const cryptic = require('../queries/bcrypt.js')
 
 router.use(express.static('public'))
 
-router.get('/restaurants/',queries.getRestaurants)
+// router.get('/restaurants/',queries.getRestaurants)
+//
+// router.get('/restaurants/:name', queries.getRestaurantsName)
 
-router.get('/restaurants/:name', queries.getRestaurantsName)
+router.get('/favorite/', (req,res,sendit)=>{
+    res.status(200).send('works')
+})
 
 router.get('/favorites/:id', (req,res,sendit)=>{
   res.sendStatus(200)
 })
-router.get('/restraunts/', (req,res,sendit)=>{
+router.get('/restaurants/', (req,res,sendit)=>{
   knex('restaurants').then(data=>{
   res.status(200).send(data)
+  })
 })
-})
+
 router.post('/user/',cryptic.compare)
 
-router.post('/users/',(req,res,sendit)=>{
-  res.sendStatus(201)
-})//no touchy
+router.post('/users/',cryptic.store)//no touchy
 
 router.post('/favorites/', (req,res,sendit)=>{
   res.sendStatus(201)
