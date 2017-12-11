@@ -14,6 +14,7 @@ router.get('/restaurants/', (req,res,sendit)=>{
   res.status(200).send(data)
   })
 })
+})
 router.post('/user/',cryptic.compare)
 router.post('/users/',cryptic.store)//no touchy
 
