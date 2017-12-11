@@ -37,3 +37,8 @@ p{
   font-weight: bold;
   color: white !important;
 }
+
+
+.brand-logo{
+  font-variant: small-caps;
+}
