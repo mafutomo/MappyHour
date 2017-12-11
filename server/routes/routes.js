@@ -11,13 +11,13 @@ router.use(express.static('public'))
 //
 // router.get('/restaurants/:name', queries.getRestaurantsName)
 
-router.get('/favorite/', (req,res,sendit)=>{
-    res.status(200).send('works')
-})
+router.get('/favorite/:id', (req,res,sendit)=>{
+    let user = req.params.id;
+    return knex('favorites').where('user_id', user).join('restaurants', 'restaurants.id', '=', 'favorites.restaurant_id').select('*').then( (response) => {
+      res.status(200).send(response)
+    })
+  })
 
-router.get('/favorites/:id', (req,res,sendit)=>{
-  res.sendStatus(200)
-})
 router.get('/restaurants/', (req,res,sendit)=>{
   knex('restaurants').then(data=>{
   res.status(200).send(data)
