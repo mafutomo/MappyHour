@@ -1,34 +1,20 @@
 const express = require('express')
 const router = express.Router()
-const knex = require('../../knex.js')
+const knex = require('../../knex');
 const bcrypt = require('bcrypt');
 const bodyParser = require('body-parser')
-const queries = require('../queries/queries')
+const cryptic = require('../queries/bcrypt.js')
 
-router.use(express.static('public'))
-
-router.post('/user/',(req,res,sendit)=>{
-  console.log(req.body);
-      res.sendStatus(200)
-  })//no touchy
-
-// router.post('/user/',(req,res,sendit)=>{
-//   knex('users').where({
-//   email: req.body.email
-//   }).first()
-//   .then(user=>{
-//       res.status(201).send({name: user.firstName})
-//   })
-// })
-
-router.get('/restaurants/',queries.getRestaurants)
-
-router.get('/restaurants/:name', queries.getRestaurantsName)
 
 router.get('/favorites/:id', (req,res,sendit)=>{
   res.sendStatus(200)
 })
-
+router.get('/restraunts/', (req,res,sendit)=>{
+  knex('restaurants').then(data=>{
+  res.status(200).send(data)
+})
+})
+router.post('/user/',cryptic.compare)
 router.post('/users/',(req,res,sendit)=>{
   res.sendStatus(201)
 })//no touchy

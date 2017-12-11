@@ -20,11 +20,12 @@ width: 100%;
   font-weight: bold;
   text-align: center;
   font-size: 135%;
+  margin-top:-23px;
 }
 
 .text-label{
   font-family: 'Comfortaa', cursive;
-  color: #fff
+  color: black;
   /*font-size: 90%;*/
 }
 
@@ -83,12 +84,13 @@ li{
   border-style: none !important;
   border-radius: 22px !important;
   margin-top: 5px !important;
-  margin-bottom: 24px !important;
+  margin-bottom: 14px !important;
   align-items: center !important;
   /*box-shadow: 2px 2px 8px #413F3F;*/
   width: 250px !important;
   height:25px !important;
   padding: 5px !important;
+  padding-left: 17px !important;
   font-family: 'Open Sans', sans-serif  !important;
   color: black;
 }
@@ -150,4 +152,8 @@ li{
   margin-right:10%;
   margin-top: -6%;
 
+}
+
+#goSign{
+  margin-top:-12px;
 }

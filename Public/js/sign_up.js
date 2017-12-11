@@ -11,9 +11,13 @@ $(".signup").submit(function(event) {
     const email = $("input#email").val();
     const password = $("input#password").val();
     const passwordConfirm = $("input#passwordConfirm").val();
-
+    if(password !== passwordConfirm){
+        Materialize.toast('Passwords must match, please try again', 4000)
+    }
+    else{
     $.ajax({
-    url:   `${baseURL}/users/${email}`,
+    url:   `${baseURL}/users/`,
+    type: 'POST',
     data: {
       first_name: firstName,
       last_name: lastName,
@@ -21,11 +25,10 @@ $(".signup").submit(function(event) {
       password: password
     },
     success: function (data) {
-          console.log(data);
-                          }
+          window.location.href = `${baseURL}/index.html`
+          }
   })
-    //console.log(data);
-
+}
     console.log(firstName, lastName, email, password, passwordConfirm);
   })
 
