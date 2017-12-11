@@ -10,7 +10,7 @@ exports.seed = function(knex, Promise) {
         lng:-105.281401,
         description:'Coffee / Tea / Juice / Treats',
         url:'http://www.amantecoffee.com/',
-        picture:'https://s3-media3.fl.yelpcdn.com/bphoto/s_nTWYPK6wuumlO7HSodCQ/ls.jpg',
+        picture:'https://static.rootsrated.com/image/upload/s--WVcgyS97--/t_rr_large_traditional/qjdzt1ux48dmqfqbngj9.jpg',
         happyHourMenu:'Daily 3 - 6pm | Food: $3.5 Affogato & Gelato | Drinks: $3 Carlsberg Beer, $5 Coffee Cocktails, $3 Wells, $1 off Wine, $5 Shottino'},
         {name: 'Arcana Restaurant',
         address:'909 Walnut St Boulder, CO 80302',

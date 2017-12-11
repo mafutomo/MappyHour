@@ -16,7 +16,7 @@ $(document).ready(function() {
       },
       success: function(data) {
         localStorage.setItem("user", data.id)
-        window.location.href = `${baseURL}/map.html`
+        window.location.href = "map.html"
       },
       error: function(data) {
         console.log('error');
