@@ -37,7 +37,8 @@ const myFavePage = (req,res,sendit) => {
     return knex('favorites').where('user_id', user).join('restaurants', 'restaurants.id', '=', 'favorites.restaurant_id').select('*').then( (response) => {
       res.status(200).send(response)
     })
-  }  
+  }
+
 module.exports={
 getRestaurants,
 getRestaurantsName,
