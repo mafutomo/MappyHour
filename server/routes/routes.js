@@ -6,10 +6,10 @@ const bodyParser = require('body-parser')
 const cryptic = require('../queries/bcrypt.js')
 const queries = require('../queries/queries.js')
 
-router.get('/favorites/:id', (req,res,sendit)=>{
-  res.sendStatus(200)
-})
+router.use(express.static('public'))
 
+
+router.get('/favorite/:id', queries.myFavePage)
 
 router.get('/restaurants/',queries.getRestaurants)
 
