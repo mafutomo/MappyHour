@@ -18,7 +18,6 @@ const getRestaurantsName = (req,res,sendit)=>{
   }).first()
   .then(restraunt=>{
     res.status(200).send(restraunt)
-
   })
 }
 
