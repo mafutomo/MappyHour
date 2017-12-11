@@ -14,9 +14,11 @@ const store = (req,res,sendit)=>{
     email:req.body.email,
     password:hash,
     salt:salt
-  }).then(user=>{
+  },'*')
+  .then(user=>{
     console.log(user);
-    res.status(204).send({name: user.firstName})
+    console.log("user[0].id = ",user[0].id);
+    res.status(204).send({id:user[0].id})
   })
 }
 const compare = (req,res,sendit)=>{
