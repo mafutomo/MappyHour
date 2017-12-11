@@ -15,16 +15,14 @@ $(document).ready(function() {
         password: password
       },
       success: function(data) {
-        console.log(data);
-      //  if (data == "OK") {
+              localStorage.setItem("user", data.id)
           window.location.href = `${baseURL}/map.html`
-        //}
+          console.log(data);
       },
       error: function(data){
-        console.log(data);
+        console.log('error');
           Materialize.toast('Please check your user name and / or password and try again', 6000)
-      }
+      },
     })
-
   });
 })

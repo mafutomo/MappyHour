@@ -23,8 +23,9 @@ const compare = (req,res,sendit)=>{
   email: req.body.email
   }).first()
   .then(user=>{
+    console.log(user);
     bcrypt.compare(req.body.password, user.password, function(err, ver) {
-        ver ? res.status(200).send({id:user.id}) : res.sendStatus(401)
+        ver ? res.status(200).send({id:user.id}): res.sendStatus(401)
     })
   })
 }

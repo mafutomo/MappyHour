@@ -7,9 +7,13 @@ const cryptic = require('../queries/bcrypt.js')
 
 router.use(express.static('public'))
 
-router.get('/restaurants/',queries.getRestaurants)
+// router.get('/restaurants/',queries.getRestaurants)
+//
+// router.get('/restaurants/:name', queries.getRestaurantsName)
 
-router.get('/restaurants/:name', queries.getRestaurantsName)
+router.get('/favorites/', (req,res,sendit)=>{
+    res.status(200).send('works')
+})
 
 router.get('/favorites/:id', (req,res,sendit)=>{
   res.sendStatus(200)

@@ -1,9 +1,7 @@
 $( document ).ready(function(){
-
-  console.log('hola!');
-
- $(".button-collapse").sideNav();
-
+  console.log('doc loaded');
+  const user = localStorage.getItem("user");
+  $( "body" ).load( "/favorites.html", function() {
+  console.log('OK');;
+});
 })
-
-console.log('hello!');
