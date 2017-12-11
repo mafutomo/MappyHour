@@ -8,7 +8,7 @@ $( document ).ready(function(){
       type: 'GET',
       success: function(response) {
         console.log(response);
-        $('#test2').text(response[0].name + response[0].address + response[0].happyHourMenu)
+        $('#test2').text(response[0].name + response[0].address  + response[0].happyHourMenu)
       },
       error: function(response) {
         console.log('error');

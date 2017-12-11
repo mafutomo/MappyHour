@@ -4,19 +4,14 @@ const knex = require('../../knex');
 const bcrypt = require('bcrypt');
 const bodyParser = require('body-parser')
 const cryptic = require('../queries/bcrypt.js')
-
+const query = require('../queries/queries.js')
 router.use(express.static('public'))
 
 // router.get('/restaurants/',queries.getRestaurants)
 //
 // router.get('/restaurants/:name', queries.getRestaurantsName)
 
-router.get('/favorite/:id', (req,res,sendit)=>{
-    let user = req.params.id;
-    return knex('favorites').where('user_id', user).join('restaurants', 'restaurants.id', '=', 'favorites.restaurant_id').select('*').then( (response) => {
-      res.status(200).send(response)
-    })
-  })
+router.get('/favorite/:id', query.myFavePage)
 
 router.get('/restaurants/', (req,res,sendit)=>{
   knex('restaurants').then(data=>{
