@@ -20,7 +20,7 @@ width: 100%;
   font-weight: bold;
   text-align: center;
   font-size: 135%;
-  margin-top:-23px;
+  margin-top:-15px;
 }
 
 .text-label{
@@ -52,10 +52,10 @@ p{
 
 .heading{
   margin-top: -10px;
-  color: #E89A3C;
+  color: #ffa83f;
   /*font-family: 'Oswald', sans-serif;*/
   font-family: 'Hammersmith One', sans-serif;
-  font-size: 600%;
+  font-size: 400%;
   text-align: center;
   text-shadow: 2px 2px 8px #413F3F;
 }
@@ -70,7 +70,7 @@ li{
 
 .heading_sign_up{
   margin-top: 5px;
-  color: #E89A3C;
+  color: #ffa83f;
   font-family: 'Hammersmith One', sans-serif;
   font-size: 400%;
   text-align: center;
@@ -79,34 +79,33 @@ li{
 
 .input {
   background-color: rgba(255,255,255,.7) !important;
-  /*border-color: #4CABEA;*/
   border-width: 2px !important;
   border-style: none !important;
   border-radius: 22px !important;
   margin-top: 5px !important;
   margin-bottom: 14px !important;
   align-items: center !important;
-  /*box-shadow: 2px 2px 8px #413F3F;*/
   width: 250px !important;
   height:25px !important;
   padding: 5px !important;
   padding-left: 17px !important;
   font-family: 'Open Sans', sans-serif  !important;
-  color: black;
+  color: black !important;
 }
 
 .content{
   text-align: center;
+  margin-top: 30px;
 }
 
 .heading{
-    margin-top: 5px !important;
+    margin-top: 30px !important;
     text-align: center;
 }
 
 .btn-primary {
-  background-color: #4CABEA;
-  border-color: #3290CE;
+  background-color: #49b6ff;
+  border-color: #56bbff;
   border-width: 2px;
   border-style: solid;
   margin-bottom: 24px;
@@ -143,7 +142,7 @@ li{
 .signin{
   margin-left: 10%;
   margin-right:10%;
-  margin-top: 70%;
+  margin-top: 75%;
 
 }
 
