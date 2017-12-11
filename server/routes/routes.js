@@ -4,18 +4,19 @@ const knex = require('../../knex');
 const bcrypt = require('bcrypt');
 const bodyParser = require('body-parser')
 const cryptic = require('../queries/bcrypt.js')
-
+const queries = require('../queries/queries.js')
 
 router.get('/favorites/:id', (req,res,sendit)=>{
   res.sendStatus(200)
 })
-router.get('/restaurants/', (req,res,sendit)=>{
-  knex('restaurants').then(data=>{
-  res.status(200).send(data)
-  })
-})
-})
+
+
+router.get('/restaurants/',queries.getRestaurants)
+
+router.get('/restaurants/:name',queries.getRestaurantsName)
+
 router.post('/user/',cryptic.compare)
+
 router.post('/users/',cryptic.store)//no touchy
 
 router.post('/favorites/', (req,res,sendit)=>{
