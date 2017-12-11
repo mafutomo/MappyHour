@@ -1,13 +1,13 @@
 $(document).ready(function() {
 
-const baseURL = 'http://localhost:3000'
+const baseURL = 'http://localhost:3001'
 
 $(".signup").submit(function(event) {
     event.preventDefault();
 
     const firstName = $("input#firstName").val();
     const lastName = $("input#lastName").val();
-    const email = $("input#email").val();
+    const email = $("input#email").val().toLowerCase();
     const password = $("input#password").val();
     const passwordConfirm = $("input#passwordConfirm").val();
 
