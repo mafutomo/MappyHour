@@ -9,7 +9,9 @@ exports.seed = function(knex, Promise) {
         {id: 7,user_id: 4, restaurant_id: 1},
         {id: 8,user_id: 4, restaurant_id: 2},
         {id: 9,user_id: 4, restaurant_id: 4},
-        {id: 10,user_id: 4, restaurant_id: 3}
+        {id: 10,user_id: 4, restaurant_id: 3},
+        {id: 11,user_id: 3, restaurant_id: 3},
+        {id: 12,user_id: 3, restaurant_id: 4}
       ]).then(function(){
         return knex.raw("SELECT setval('favorites_id_seq', (SELECT MAX(id) FROM favorites))");
     });
