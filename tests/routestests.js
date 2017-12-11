@@ -46,7 +46,7 @@ describe('POST /user', function() {
     request(server)
       .post('/user')
       .set('Accept', 'application/json')
-      .send({email:'schroder.brent@gmail.com', password: 'supd'})
+      .send({email:'schroder.brent@gmail.com', password: 'supdogmex'})
       .expect(200)
       .end(function(err, res) {
         if (err) return done(err);
@@ -59,6 +59,12 @@ describe('POST /users/', function() {
     request(server)
       .post('/users/')
       .set('Accept', 'application/json')
+      .send({
+        firstName:'Brian',
+        lastName:'kracha',
+        email:'brain@gmail.com',
+        password: 'flexingfalcid'
+      })
       .expect(201)
       .end(function(err, res) {
         if (err) return done(err);
