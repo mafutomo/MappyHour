@@ -1,18 +1,3 @@
-// var boulderLocations = [
-//     {
-//       name:'West End',
-//       description: 'The Town of Carbondale is a Home Rule Municipality in Garfield County, Colorado, United States. The town population was 6427 at the 2010 United States Census. The town is located in the Roaring Fork Valley, downstream from Aspen',
-//       lat: 40.016256, 
-//       lng: -105.283216
-//     },
-//     {
-//       name:'Enzo',
-//       description: 'Roaring Fork River at Glenwood Springs. The town proper sits on the south bank of the river, at the confluence of the Crystal River. Carbondales horizon is dominated by the 12,953 ft (3,952 m) tall Mount Sopris several miles to the south of town.',
-//       lat: 40.018719, 
-//       lng: -105.279125
-//     },
-// ];
-
 var boulderLocations = [
     {
         "id": 1,
@@ -44,14 +29,31 @@ var boulderLocations = [
         "created_at": "2017-12-10T19:56:21.543Z",
         "updated_at": "2017-12-10T19:56:21.543Z"
     },
+    {
+        "id": 3,
+        "name": "The Attic Bar & Bistro",
+        "address": "949 Walnut St Boulder, CO 80302",
+        "phonenumber": "303-415-1300",
+        "lat": 40.016564,
+        "lng": -105.282408,
+        "description": "Casual / Late Night Eats",
+        "url": "http://www.atticbistro.com/",
+        "picture": "https://res.cloudinary.com/simpleview/image/fetch/f_auto,q_75/http://Boulder.simpleviewcrm.com/images/listings/original_attic-bar-3.jpg",
+        "happyHourMenu": "Monday - Saturday 3 - 6pm, Sunday 9pm - Close | Food: Appetizer Specials | Drinks: $3 Wells, Drafts, and Fat Alberts, $3.75 Wines",
+        "averageRating": 3,
+        "created_at": "2017-12-10T19:56:21.543Z",
+        "updated_at": "2017-12-10T19:56:21.543Z"
+    },
 ];
 
-// var $xhr = $.getJSON('https://googleplacesg68.herokuapp.com/maps/api/place/textsearch/json?query='+name+'&key='+ key);
-// $xhr.done(function(data) {
-//     if ($xhr.status !== 200) {
-//         return;
-//     }
-// })
+var $xhr = $.getJSON('http://localhost:3001/restraunts');
+$xhr.done(function(data) {
+    if ($xhr.status !== 200) {
+        return;
+    }
+    console.log(data)
+})
+
 const name = boulderLocations.find(ele =>{
     return {lat: ele.lat, lng: ele.lng}
 })
@@ -59,7 +61,8 @@ const name = boulderLocations.find(ele =>{
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 15,
-      center: name
+      center: name,
+      styles: styles,
     });
     var marker = undefined;
     var infowindow = new google.maps.InfoWindow();
@@ -71,6 +74,7 @@ function initMap() {
                 lng: boulderLocations[i].lng,
                 name: boulderLocations[i].name,
             };
+            console.log(obj);
             //console.log('New Object ',obj);
             var contentString = boulderLocations[i].name;
             
@@ -78,18 +82,13 @@ function initMap() {
             //     zoom: 15,
             //     center: obj
             // });
-            // var infowindow = new google.maps.InfoWindow({
-            //     content: contentString
-            // });
+            
             marker = new google.maps.Marker({
                 position: boulderLocations[i],
                 map: map,
                 title: boulderLocations[i].name,
             });
-            // marker.addListener('click', function() {
-            //     infowindow.setContent('test');
-            //     infowindow.open(map, marker);
-            // });
+
             google.maps.event.addListener(marker, 'click', (function(marker, i) {
                 return function() {
                   infowindow.setContent(`${boulderLocations[i].name}
