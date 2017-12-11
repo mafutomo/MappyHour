@@ -18,7 +18,7 @@ router.post('/user/',(req,res,sendit)=>{
           ver ? res.status(200).send({id:user.id}) : res.sendStatus(401)
       })
     })
-}
+})
 
 // router.post('/user/',(req,res,sendit)=>{
 //   knex('users').where({
