@@ -11,7 +11,7 @@ const path = require('path')
 
 // app.use(express.static('/public'))
 
-app.use(express.static('/public/index.html')
+app.use(express.static('/public/index.html'))
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
