@@ -7,8 +7,8 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "mocha tests/routestests.js & mocha tests/bcrypttest.js",
-    "devstart": "nodemon server.js"
+    "test": "mocha tests",
+    "devstart": "node server.js"
   },
   "repository": {
     "type": "git",

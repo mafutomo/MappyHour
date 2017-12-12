@@ -5,7 +5,6 @@ const server = require('../server.js')
 const bcrypt = require('bcrypt')
 const addDatabaseHooks = require('./utils')
 const { suite, test } = require('mocha');
-process.env.NODE_ENV = 'development'
 suite('part2 routes', addDatabaseHooks(() => {
   test('GET/ restraunts', function(done) {
     request(server)
@@ -175,5 +174,5 @@ suite('part2 routes', addDatabaseHooks(() => {
         restId:2,
         rating:3})
       .expect(200,{hello:'world'},done)
-});
+  });
 }));
