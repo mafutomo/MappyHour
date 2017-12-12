@@ -6,7 +6,7 @@ function initMap() {
     }
 
     //console.log('data', JSON.parse(data[0]))
-   
+
     placeCenter ={lat:40.016705,lng: -105.281401}
 
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -28,7 +28,7 @@ function initMap() {
             console.log(typeof parseFloat(data[i].lng));
             //var contentString = data[i].name;
             var markerObj = {lat: parseFloat(data[i].lat), lng: parseFloat(data[i].lng)};
-            
+
             marker = new google.maps.Marker({
                 position: markerObj,
                 map: map,
@@ -54,7 +54,7 @@ function initMap() {
                   infowindow.open(map, marker);
                 }
             })(marker, i));
-            
+
         }
     }
     })
@@ -62,5 +62,3 @@ function initMap() {
 
 // `${data[i].name}
 // `<button>Save location</button>`
-
-
