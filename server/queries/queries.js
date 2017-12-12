@@ -35,7 +35,6 @@ const deleteFavorite = (req,res,sendit)=>{
 //no touchy
 const myFavePage = (req,res,sendit) => {
     let user = req.params.id;
-    console.log(user);
     return knex('favorites').where('user_id', user).join('restaurants', 'restaurants.id', '=', 'favorites.restaurant_id').select('*').then( (response) => {
       res.status(200).send(response)
     })

@@ -38,7 +38,7 @@ function initMap() {
                                     userId: userId,
                                   },
                                 success: function(response){
-                                    console.log(response);
+                                    // console.log(response);
                                     $(event.target).closest('.card').remove()
                                 },
                             });

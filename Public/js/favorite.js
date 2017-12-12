@@ -1,6 +1,6 @@
 $( document ).ready(function(){
     $(".button-collapse").sideNav();
-  console.log('doc loaded');
+  // console.log('doc loaded');
   const userId = localStorage.getItem("user");
 
   $('body').ready(function(event){
@@ -9,7 +9,7 @@ $( document ).ready(function(){
       url: `/favorites/${userId}`,
       type: 'GET',
       success: function(response) {
-        console.log(response);
+        // console.log(response);
         // $('#test2').text(response[0].name + response[0].address  + response[0].happyHourMenu)
         for(let i = 0; i < response.length; i++){
         $('#attach').append(" <div class='col s12 m7'>"+
@@ -35,7 +35,7 @@ $( document ).ready(function(){
         "</div>") }
       },
       error: function(response) {
-        console.log('error');
+        // console.log('error');
         Materialize.toast('Something went wrong, please refresh the page and try again', 6000)
       },
       //console.log(data);
@@ -46,14 +46,14 @@ $('#attach').on("click", ".removal", function(event){
   //console.log('clicked');
   var deleteMe = $(event.target).closest('.card').find('.noshowRestaurant').text()
   var userId = $(event.target).closest('.card').find('.noshowUser').text()
-  console.log(userId);
+  // console.log(userId);
   $.ajax({
     url: `/favorites/${deleteMe}/${userId}`,
     type: 'DELETE',
     success: function(response){
-      console.log(response);
+      // console.log(response);
       $(event.target).closest('.card').remove()
-       Materialize.toast('Favorite Removed!', 4000) 
+       Materialize.toast('Favorite Removed!', 4000)
     },
   })
 })
