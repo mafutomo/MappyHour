@@ -2,8 +2,8 @@ const express = require('express')
 const router = express.Router()
 const knex = require('../../knex')
 
-const updateRating = (restId,userId) => {
-  knex.select('rating').from('favorites').where({restaurant_id:restId, user_id:userId})
+const updateRating = (restId) => {
+  knex.select('rating').from('favorites').where({restaurant_id:restId})
   .then(ratings=>{
     var sum = ratings.map(val => val.rating).reduce((a, b) => Number(a) + Number(b))
     var avg = (sum+3)/(ratings.length+1)

@@ -16,7 +16,7 @@ const store = (req,res,sendit)=>{
     salt:salt
   }).then(user=>{
     console.log(user);
-    res.status(204).send({name: user.firstName})
+    res.status(201).send({name: user.firstName})
   })
 }
 const compare = (req,res,sendit)=>{
