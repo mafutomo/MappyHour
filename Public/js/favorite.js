@@ -41,8 +41,16 @@ $( document ).ready(function(){
 })
 $('#attach').on("click", ".removal", function(event){
   event.preventDefault();
-  console.log('clicked');
+  //console.log('clicked');
   var deleteMe = $(event.target).closest('.card').find('.card-title').text()
   console.log(deleteMe);
+  $.ajax({
+    url: `/favorite/${deleteMe}`,
+    type: 'DELETE',
+    success: function(response){
+      console.log(response);
+    },
+
+  })
 })
 })
