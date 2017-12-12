@@ -21,6 +21,14 @@ p{
   text-align: left;
 }
 
+.noshowUser{
+  display:none;
+}
+
+.noshowRestaurant{
+  display:none;
+}
+
 .card-image{
   clear:left;
   /*margin-top:-12px;*/
@@ -35,12 +43,14 @@ p{
 
 .card-action{
   background-color: #f57c00 !important;
+  text-align: center;
 }
 
-.remove{
+.removal{
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   color: white !important;
+  text-align: center;
 }
 
 

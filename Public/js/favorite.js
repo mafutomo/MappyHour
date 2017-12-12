@@ -24,9 +24,11 @@ $( document ).ready(function(){
               "<p>"+response[i].address+"</p>"+
               "<p>"+response[i].phonenumber+"</p>"+
               "<p>"+response[i].happyHourMenu+"<p>"+
+              "<p class='noshowUser'>"+response[i].user_id+"<p>"+
+              "<p class='noshowRestaurant'>"+response[i].restaurant_id+"<p>"+
               "</div>" +
               "<div class='card-action'>"+
-              "<button class='removal'>Remove</button>" +
+              "<button class='removal'>REMOVE</button>" +
               "</div>"+
             "</div>" +
           "</div>" +
@@ -42,11 +44,15 @@ $( document ).ready(function(){
 $('#attach').on("click", ".removal", function(event){
   event.preventDefault();
   //console.log('clicked');
-  var deleteMe = $(event.target).closest('.card').find('.card-title').text()
+  var deleteMe = $(event.target).closest('.card').find('.noshowRestaurant').text()
+  var userId = $(event.target).closest('.card').find('.user_id').text()
   console.log(deleteMe);
   $.ajax({
     url: `/favorite/${deleteMe}`,
     type: 'DELETE',
+    data: {
+      userId: userId
+    },
     success: function(response){
       console.log(response);
     },
