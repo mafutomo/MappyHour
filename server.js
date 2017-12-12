@@ -13,7 +13,7 @@ const path = require('path')
 
 // app.use(express.static('/public'))
 
-app.use(express.static(path.join('public')))
+app.use(express.static(path.join('sauce')))
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
