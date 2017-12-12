@@ -7,16 +7,16 @@ const router = require('./server/routes/routes.js')
 const bodyParser = require('body-parser')
 // body parser
 // cookie parser at some point
-app.use(express.static('public'))
 
+app.use(express.static('public'))
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use('/', router)
-app.use((req,res,sendit)=>{
-  res.sendStatus(506)
-})
+// app.use((req,res,sendit)=>{
+//   res.sendStatus(404)
+// })
 app.listen(port, ()=>{
   console.log(`you are now tunned to ${port} "the bees knees"`)
 })
