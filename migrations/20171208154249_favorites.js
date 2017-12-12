@@ -1,7 +1,7 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('favorites', table => {
     table.increments('id')
-    table.integer('rating')
+    table.integer('rating').defaultsTo(3)
     table.integer('user_id').notNullable()
     table.foreign('user_id').references('id').inTable('users')
     table.integer('restaurant_id').notNullable()
