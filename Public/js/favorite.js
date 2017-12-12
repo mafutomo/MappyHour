@@ -48,7 +48,7 @@ $('#attach').on("click", ".removal", function(event){
   var userId = $(event.target).closest('.card').find('.noshowUser').text()
   console.log(userId);
   $.ajax({
-    url: `/favorite/${deleteMe}/${userId}`,
+    url: `/favorites/${deleteMe}/${userId}`,
     type: 'DELETE',
     success: function(response){
       console.log(response);

@@ -23,6 +23,10 @@ width: 100%;
   margin-top:-15px;
 }
 
+.noshowRestaurant{
+  display:none;
+}
+
 .text-label{
   font-family: 'Comfortaa', cursive;
   color: black;
@@ -40,7 +44,7 @@ p{
 }
 
 .background-sign_up{
-  background-image: url('../img/CoverImabge.jpg');
+  background-image: url('../img/CoverImabge_copy.jpg');
   background-size: 124%;
   background-repeat: no-repeat;
 
