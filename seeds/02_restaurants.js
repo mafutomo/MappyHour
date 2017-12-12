@@ -52,7 +52,7 @@ exports.seed = function(knex, Promise) {
         description:'Contemporary / Fine Dining',
         url:'https://www.brasserietenten.com/',
         picture:'https://www.brasserietenten.com/wp-content/uploads/2014/05/street-600x403.jpg',
-        happyHourMenu:'Daily 3 - 6:30pm | Food: Discounted hors d'/'oeuvres | Drinks: $3.25 Tap Beer, $4.5 Featured Wine, $4.5-6 Cocktails'},
+        happyHourMenu:'Daily 3 - 6:30pm | Food: Discounted hors d\'oeuvres | Drinks: $3.25 Tap Beer, $4.5 Featured Wine, $4.5-6 Cocktails'},
         {name: 'Centro Mexican Kitchen',
         address:'950 Pearl St Boulder, CO 80302',
         phonenumber:'303-442-7771',
