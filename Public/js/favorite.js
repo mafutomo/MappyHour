@@ -22,13 +22,13 @@ $( document ).ready(function(){
             "<div class='card-content'>" +
               "<p class='flow-text'>"+response[i].description+"<p>"+
               "<p>"+response[i].address+"</p>"+
-              "<p>"+response[i].phonenumber+"</p>"+
+              "<p>"+response[i].phonenumber+"</p>"+"<br>"+
               "<p>"+response[i].happyHourMenu+"<p>"+
               "<p class='noshowUser'>"+response[i].user_id+"<p>"+
               "<p class='noshowRestaurant'>"+response[i].restaurant_id+"<p>"+
               "</div>" +
               "<div class='card-action'>"+
-              "<button class='removal'>REMOVE</button>" +
+              "<button class='removal'><i class='small material-icons'>delete</i></button>" +
               "</div>"+
             "</div>" +
           "</div>" +
@@ -53,6 +53,7 @@ $('#attach').on("click", ".removal", function(event){
     success: function(response){
       console.log(response);
       $(event.target).closest('.card').remove()
+       Materialize.toast('Favorite Removed!', 4000) 
     },
   })
 })

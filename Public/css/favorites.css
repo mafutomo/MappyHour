@@ -10,7 +10,7 @@ h5{
   margin-top: 12px !important;
 }
  h2{
-   font-family:   font-family: 'Open Sans'
+   font-family:font-family: 'Open Sans'
    font-weight:600;
    font-size: 300%;
    text-align:center;
@@ -19,6 +19,36 @@ h5{
 p{
   font-family: 'Open Sans', sans-serif;
   text-align: left;
+}
+
+.side-nav{
+  background-image: url('../img/swirl.png') !important;
+}
+/* add this */
+
+.flow-text{
+  font-size: 20px !important;
+}
+
+.side-nav li>a{
+  font-size: 20px !important;
+  font-weight:normal !important;
+  margin-top: 15px !important;
+}
+/* add this */
+.background-subtle{
+  background-image: url('../img/swirl.png') !important;
+}
+
+.sub-heading{
+  font-family: 'Comfortaa', cursive !important;
+  font-weight: bold;
+  text-align: center;
+  font-size: 300%;
+}
+
+.card{
+  margin-top: 30px !important;
 }
 
 .noshowUser{
@@ -39,6 +69,7 @@ p{
 
 .card-stacked{
   padding-top: 3px;
+
 }
 
 .card-action{
@@ -53,7 +84,15 @@ p{
   text-align: center;
 }
 
+.brand-logo{
+  font-variant:normal !important;
+  /* font-size: 35px !important; */
+}
+
+.card .card-action{
+  padding: 10px 27px !important;
+}
 
 .brand-logo{
-  font-variant: small-caps;
+  font-variant: normal;
 }
