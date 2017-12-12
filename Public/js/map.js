@@ -6,7 +6,7 @@ function initMap() {
         }
         placeCenter ={lat:40.016705,lng: -105.281401}
         var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 17,
+            zoom: 16,
             center: placeCenter,
             styles: styles,
         });
@@ -30,10 +30,13 @@ function initMap() {
                 const userId = localStorage.getItem("user");
                     $( document ).ready(function() {
                         $(".mapButton").click(function() {
-                            //console.log(`${data[i].name}`);
                             $.ajax({
-                                url: `/favorite/${data[i].id}/${userId}`,
+                                url: `/favorites/`,
                                 type: "POST",
+                                data: {
+                                    restId: data[i].id,
+                                    userId: userId,
+                                  },
                                 success: function(response){
                                     console.log(response);
                                     $(event.target).closest('.card').remove()
@@ -53,6 +56,7 @@ function initMap() {
                         `<a href="${data[i].phonenumber}">${data[i].phonenumber}</a>`+
                         `</br></br><a href="${data[i].address}">${data[i].address}</a>`+
                         `<button id="mapButton" class="mapButton">Save location</button>`+
+                        // `<p class='noshowRestaurant'>${data[i].id}<p>`+
                         '</div>'+
                         '</div>'
                     );

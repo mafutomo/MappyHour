@@ -39,7 +39,7 @@ const myFavePage = (req,res,sendit) => {
     return knex('favorites').where('user_id', user).join('restaurants', 'restaurants.id', '=', 'favorites.restaurant_id').select('*').then( (response) => {
       res.status(200).send(response)
     })
-  }
+}
 
 const putFavorites = (req,res,sendit) =>{
   knex('favorites').where({restaurant_id: req.body.restId, user_id: req.body.userId}).update({rating: req.body.rating})
@@ -48,10 +48,23 @@ const putFavorites = (req,res,sendit) =>{
     res.status(200).send({hello:'world'})
   })
 }
+
+const mapToFavorites = (req,res,sendit) =>{
+  knex('favorites')
+  .insert({
+    restaurant_id:req.body.restId,
+    user_id:req.body.userId
+  })
+  .then(count =>{
+    res.sendStatus(201)
+  })
+}
+
 module.exports={
 getRestaurants,
 getRestaurantsName,
 putFavorites,
 deleteFavorite,
-myFavePage
+myFavePage,
+mapToFavorites
 }

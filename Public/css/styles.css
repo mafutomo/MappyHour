@@ -156,3 +156,6 @@ li{
 #goSign{
   margin-top:-12px;
 }
+.noshowRestaurant{
+  display:none;
+}

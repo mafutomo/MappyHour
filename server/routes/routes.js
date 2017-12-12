@@ -19,9 +19,7 @@ router.post('/user/',cryptic.compare)
 
 router.post('/users/',cryptic.store)//no touchy
 
-router.post('/favorite/', (req,res,sendit)=>{
-  res.sendStatus(201)
-})
+router.post('/favorites/', queries.mapToFavorites)
 
 //no touchy
 router.delete('/favorite/:id/:userId', queries.deleteFavorite)
