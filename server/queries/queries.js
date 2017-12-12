@@ -22,9 +22,9 @@ const getRestaurantsName = (req,res,sendit)=>{
 }
 
 const deleteFavorite = (req,res,sendit)=>{
-  if (!req.params.id) res.sendStatus(404)
-  knex('favorites').where({id: req.params.id}).del()
-  .then(fav=>res.sendStatus(200))
+  if(!req.params.id) res.sendStatus(404)
+  knex('favorites').where({restaurant_id: req.params.id, user_id: req.params.userId}).del().then(
+    res.sendStatus(200))
 }
 
 // const getFavorites = (req,res,sendit) =>{
@@ -40,6 +40,8 @@ const myFavePage = (req,res,sendit) => {
     })
   }
 //no touchy
+
+
 
 module.exports={
 getRestaurants,

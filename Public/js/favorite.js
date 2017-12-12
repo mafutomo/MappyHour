@@ -3,7 +3,7 @@ $( document ).ready(function(){
   console.log('doc loaded');
   const userId = localStorage.getItem("user");
 
-  $('#test').click(function(event){
+  $('body').ready(function(event){
   //  console.log('clicked');
     $.ajax({
       url: `/favorite/${userId}`,
@@ -45,18 +45,15 @@ $('#attach').on("click", ".removal", function(event){
   event.preventDefault();
   //console.log('clicked');
   var deleteMe = $(event.target).closest('.card').find('.noshowRestaurant').text()
-  var userId = $(event.target).closest('.card').find('.user_id').text()
-  console.log(deleteMe);
+  var userId = $(event.target).closest('.card').find('.noshowUser').text()
+  console.log(userId);
   $.ajax({
-    url: `/favorite/${deleteMe}`,
+    url: `/favorite/${deleteMe}/${userId}`,
     type: 'DELETE',
-    data: {
-      userId: userId
-    },
     success: function(response){
       console.log(response);
+      $(event.target).closest('.card').remove()
     },
-
   })
 })
 })

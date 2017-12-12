@@ -24,12 +24,9 @@ router.post('/favorite/', (req,res,sendit)=>{
   res.sendStatus(201)
 })
 
-router.delete('/favorite/:id', (req,res,sendit)=>{
-  if (!req.params.id) res.sendStatus(404)
-  knex('favorites').where({restaurant_id: req.params.id}).del().then(
-    res.sendStatus(200)
-  )
-})
+//no touchy
+router.delete('/favorite/:id/:userId', queries.deleteFavorite)
+//no touchy
 
 router.put('/favorite/', (req,res,sendit)=>{
   res.sendStatus(200)
