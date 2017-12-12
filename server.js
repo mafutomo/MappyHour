@@ -13,7 +13,7 @@ const path = require('path')
 
 // app.use(express.static('/public'))
 
-app.get('/', function (req, res, sendit) {app.use(express.static('./public/index.html'))})
+app.use(express.static(path.join('public')))
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
