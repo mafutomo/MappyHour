@@ -9,7 +9,12 @@ h5{
   text-align: center;
   margin-top: 12px !important;
 }
-
+ h2{
+   font-family:   font-family: 'Open Sans'
+   font-weight:600;
+   font-size: 300%;
+   text-align:center;
+ }
 
 p{
   font-family: 'Open Sans', sans-serif;

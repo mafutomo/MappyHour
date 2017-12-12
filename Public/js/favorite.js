@@ -1,11 +1,10 @@
 $( document ).ready(function(){
     $(".button-collapse").sideNav();
-
-
   console.log('doc loaded');
   const userId = localStorage.getItem("user");
+
   $('#test').click(function(event){
-    console.log('clicked');
+  //  console.log('clicked');
     $.ajax({
       url: `/favorite/${userId}`,
       type: 'GET',
@@ -13,7 +12,7 @@ $( document ).ready(function(){
         console.log(response);
         // $('#test2').text(response[0].name + response[0].address  + response[0].happyHourMenu)
         for(let i = 0; i < response.length; i++){
-        $('#test').append(" <div class='col s12 m7'>"+
+        $('#attach').append(" <div class='col s12 m7'>"+
           "<div class='card'>"+
             "<div class='card-stacked'>" +
               "<h5 class='card-title'>"+response[i].name+"</h5>" +
@@ -27,23 +26,23 @@ $( document ).ready(function(){
               "<p>"+response[i].happyHourMenu+"<p>"+
               "</div>" +
               "<div class='card-action'>"+
-              "<a class='remove' href='#'>Remove</a>" +
+              "<button class='removal'>Remove</button>" +
               "</div>"+
             "</div>" +
           "</div>" +
         "</div>") }
       },
-
-
-
-
-
-
       error: function(response) {
         console.log('error');
-        Materialize.toast('Please check your user name and / or password and try again', 6000)
+        Materialize.toast('Something went wrong, please refresh the page and try again', 6000)
       },
       //console.log(data);
   })
+})
+$('#attach').on("click", ".removal", function(event){
+  event.preventDefault();
+  console.log('clicked');
+  var deleteMe = $(event.target).closest('.card').find('.card-title').text()
+  console.log(deleteMe);
 })
 })
