@@ -209,7 +209,7 @@ exports.seed = function(knex, Promise) {
         {name: 'OAK at fourteenth',
         address:'Boulder, CO 80302',
         phonenumber:'303-444-3622',
-        lat:40.018250,,
+        lat:40.018250,
         lng:-105.277107,
         description:'Contemporary / Fine Dining',
         url:'http://oakatfourteenth.com/',

@@ -6,7 +6,7 @@ $( document ).ready(function(){
   $('body').ready(function(event){
   //  console.log('clicked');
     $.ajax({
-      url: `/favorite/${userId}`,
+      url: `/favorites/${userId}`,
       type: 'GET',
       success: function(response) {
         console.log(response);

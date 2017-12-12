@@ -1,5 +1,5 @@
 function initMap() {
-    var $xhr = $.getJSON('http://localhost:3000/restaurants');
+    var $xhr = $.getJSON('http://localhost:3001/restaurants');
     $xhr.done(function(data) {
         if ($xhr.status !== 200) {
             return;
@@ -40,7 +40,7 @@ function initMap() {
                                 },
                             });
                         });
-                    }); 
+                    });
                     infowindow.setContent('<div id="content">'+
                         '<div id="siteNotice">'+
                         '</div>'+
@@ -63,8 +63,3 @@ function initMap() {
         }
     })
 }
-
-
-
-
-
