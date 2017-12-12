@@ -1,5 +1,7 @@
-'use strict';
-
+//'use strict';
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 const express = require('express')
 const app = express()
 const port = process.env.PORT || '3001'
@@ -11,7 +13,7 @@ const path = require('path')
 
 // app.use(express.static('/public'))
 
-app.use(express.static('./public/index.html'))
+app.get('/', function (req, res, sendit) {app.use(express.static('./public/index.html'))})
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
