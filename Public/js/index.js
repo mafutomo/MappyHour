@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-  const baseURL = 'http://localhost:3001'
 
   $(".signin").submit(function(event) {
     event.preventDefault();
@@ -8,7 +7,7 @@ $(document).ready(function() {
     const username = $("input#user").val().toLowerCase();
     const password = $("input#pass").val();
     $.ajax({
-      url: `${baseURL}/user/`,
+      url: `/user`,
       type: 'POST',
       data: {
         email: username,

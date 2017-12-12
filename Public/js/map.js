@@ -1,5 +1,5 @@
 function initMap() {
-    var $xhr = $.getJSON('http://localhost:3001/restaurants');
+    var $xhr = $.getJSON('/restaurants');
     $xhr.done(function(data) {
         if ($xhr.status !== 200) {
             return;
