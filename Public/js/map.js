@@ -6,7 +6,7 @@ function initMap() {
         }
         placeCenter ={lat:40.016705,lng: -105.281401}
         var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 15,
+            zoom: 17,
             center: placeCenter,
             styles: styles,
         });
@@ -32,10 +32,13 @@ function initMap() {
                         $(".mapButton").click(function() {
                             //console.log(`${data[i].name}`);
                             $.ajax({
+                                url: `/favorite/${data[i].id}/${userId}`,
                                 type: "POST",
-                                url: `/favorite/:${userId}`,
-                                data: `/restaurants/${data[i]}`,
-                              });
+                                success: function(response){
+                                    console.log(response);
+                                    $(event.target).closest('.card').remove()
+                                },
+                            });
                         });
                     }); 
                     infowindow.setContent('<div id="content">'+
