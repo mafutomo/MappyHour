@@ -9,11 +9,24 @@ h5{
   text-align: center;
   margin-top: 12px !important;
 }
-
+ h2{
+   font-family:   font-family: 'Open Sans'
+   font-weight:600;
+   font-size: 300%;
+   text-align:center;
+ }
 
 p{
   font-family: 'Open Sans', sans-serif;
   text-align: left;
+}
+
+.noshowUser{
+  display:none;
+}
+
+.noshowRestaurant{
+  display:none;
 }
 
 .card-image{
@@ -30,12 +43,14 @@ p{
 
 .card-action{
   background-color: #f57c00 !important;
+  text-align: center;
 }
 
-.remove{
+.removal{
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   color: white !important;
+  text-align: center;
 }
 
 
