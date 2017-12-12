@@ -3,7 +3,7 @@ const router = express.Router()
 const knex = require('../../knex')
 const bcrypt = require('bcrypt');
 const bodyParser = require('body-parser')
-
+const favorite = require('./favorites.js')
 
 const getRestaurants = (req,res,sendit)=>{
   knex('restaurants').then(data=>{
@@ -35,18 +35,23 @@ const deleteFavorite = (req,res,sendit)=>{
 //no touchy
 const myFavePage = (req,res,sendit) => {
     let user = req.params.id;
+    console.log(user);
     return knex('favorites').where('user_id', user).join('restaurants', 'restaurants.id', '=', 'favorites.restaurant_id').select('*').then( (response) => {
       res.status(200).send(response)
     })
   }
-//no touchy
 
-
-
+const putFavorites = (req,res,sendit) =>{
+  knex('favorites').where({restaurant_id: req.body.restId, user_id: req.body.userId}).update({rating: req.body.rating})
+  .then(count =>{
+    favorite(req.body.restId)
+    res.status(200).send({hello:'world'})
+  })
+}
 module.exports={
 getRestaurants,
 getRestaurantsName,
-
+putFavorites,
 deleteFavorite,
 myFavePage
 }
