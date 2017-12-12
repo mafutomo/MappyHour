@@ -10,6 +10,8 @@ router.get('/favorites/:id', queries.myFavePage)
 
 router.get('/restaurants/',queries.getRestaurants)
 
+router.get('/',queries.getRestaurants)
+
 router.get('/restaurants/:name',queries.getRestaurantsName)
 
 router.post('/user/',cryptic.compare)
