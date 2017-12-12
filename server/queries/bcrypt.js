@@ -16,8 +16,6 @@ const store = (req,res,sendit)=>{
     salt:salt
   },'*')
   .then(user=>{
-    console.log(user);
-    console.log("user[0].id = ",user[0].id);
     res.status(204).send({id:user[0].id})
   })
 }

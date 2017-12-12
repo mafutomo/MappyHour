@@ -45,7 +45,7 @@ const putFavorites = (req,res,sendit) =>{
   knex('favorites').where({restaurant_id: req.body.restId, user_id: req.body.userId}).update({rating: req.body.rating})
   .then(count =>{
     favorite(req.body.restId)
-    res.status(200).send({hello:'world'})
+    res.status(200).send({})
   })
 }
 module.exports={
