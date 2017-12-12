@@ -24,7 +24,7 @@ router.post('/favorite/', (req,res,sendit)=>{
 })
 
 //no touchy
-router.delete('/favorite/:id/:userId', queries.deleteFavorite)
+router.delete('/favorites/:id/:userId', queries.deleteFavorite)
 //no touchy
 
 router.put('/favorites/',queries.putFavorites)

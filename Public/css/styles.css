@@ -15,6 +15,8 @@ width: 100%;
   width: 100%;
   background-color: green;
 }
+
+
 .sub-heading{
   font-family: 'Comfortaa', cursive;
   font-weight: bold;
@@ -24,9 +26,12 @@ width: 100%;
 }
 
 .text-label{
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  /* font-family: 'Comfortaa', cursive; */
   color: black;
-  /*font-size: 90%;*/
+  font-size: 150%;
+
 }
 
 p{
@@ -40,14 +45,14 @@ p{
 }
 
 .background-sign_up{
-  background-image: url('../img/CoverImabge.jpg');
+  background-image: url('../img/CoverImabge_copy.jpg');
   background-size: 124%;
   background-repeat: no-repeat;
 
 }
 
 .background-subtle{
-  background-image: url('../img/swirl.png');
+  background-image: url('../img/swirl.png') !important;
 }
 
 .heading{
@@ -69,7 +74,7 @@ li{
 }
 
 .heading_sign_up{
-  margin-top: 5px;
+  margin-top: 25px;
   color: #ffa83f;
   font-family: 'Hammersmith One', sans-serif;
   font-size: 400%;
@@ -103,6 +108,7 @@ li{
     text-align: center;
 }
 
+
 .btn-primary {
   background-color: #49b6ff;
   border-color: #56bbff;
@@ -115,7 +121,13 @@ li{
   width: 262px;
   height:52px;
   padding: 5px;
+  margin-top:
 }
+
+.submit-btn{
+  margin-top: 20px !important;
+}
+
 
 .btn-primary {
     height:40px;
@@ -149,8 +161,18 @@ li{
 .signup{
   margin-left: 10%;
   margin-right:10%;
-  margin-top: -6%;
+  margin-top: 15%;
 
+}
+
+.side-nav{
+  background-image: url('../img/swirl.png') !important;
+}
+
+.side-nav li>a{
+  font-size: 20px !important;
+  font-weight:normal !important;
+  margin-top: 15px !important;
 }
 
 #goSign{
