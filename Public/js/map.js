@@ -63,6 +63,7 @@ function initMap() {
                     infowindow.open(map, marker);
                 }
             })(marker, i));
+
             }
         }
     })
