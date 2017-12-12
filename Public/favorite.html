@@ -4,7 +4,7 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>MappyHour</title>
+      <title class = "heading">MappyHour</title>
       <!-- Google Fonts -->
       <link href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Oswald:600" rel="stylesheet">
@@ -13,36 +13,42 @@
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
       <!-- Materialize -->
+      <!-- Custom Stylesheet and Javascript -->
+
+      <link rel="stylesheet" href="./css/favorites.css">
       <!-- Compiled and minified CSS -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-      <!-- Custom Stylesheet and Javascript -->
-          <link rel="stylesheet" href="./css/favorites.css">
     </head>
 
-    <body class="background-subtle">
+    <body class ="background-subtle">
         <!-- Navbar -->
+  <div class="navbar-fixed">
         <nav style="background-color: #f57c00;">
-        <div class="nav-wrapper" >
-        <a href="#!" class="brand-logo">MappyHour</a>
+        <div class="nav-wrapper">
+        <a href="#!" class="brand-logo" style="font-family: 'Hammersmith One';">MappyHour</a>
 
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 
         <ul class="right hide-on-med-and-down">
           <li><a href="map.html">View Map</a></li>
-          <li><a href="#">Log Out</a></li>
-        </ul>
-        <ul class="side-nav" id="mobile-demo">
-          <li><a href="map.html">View Map</a></li>
-          <li><a href="#">Log Out</a></li>
+          <li class="logout"><a href="index.html">Log Out</a></li>
         </ul>
         </div>
         </nav>
+
+      </div>
+
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="map.html">View Map</a></li>
+            <li class="logout"><a href="index.html">Log Out</a></li>
+        </ul>
+
         <!--End Navbar -->
 
 
 
   <div class="container">
-    <h2 class='sub-heading'>My Favorites</h2>
+    <!-- <h2 class='sub-heading'>My Favorites</h2> -->
     <!-- <button id="test">click me</button> -->
     <!-- <button class="removal">clicker test</button> -->
   <p id="attach"></p>
@@ -58,6 +64,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
         <script src="./js/styles.js"></script>
         <script src="./js/favorite.js"></script>
-
+<<<<<<< HEAD
+        <script src="./js/logout.js"></script>
+=======
+>>>>>>> Mel_map
     </body>
 </html>

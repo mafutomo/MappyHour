@@ -8,8 +8,9 @@ const queries = require('../queries/queries.js')
 
 router.use(express.static('public'))
 
-
+//no touchy
 router.get('/favorites/:id', queries.myFavePage)
+//no touchy
 
 router.get('/restaurants/',queries.getRestaurants)
 

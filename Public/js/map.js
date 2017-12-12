@@ -1,12 +1,12 @@
 function initMap() {
-    var $xhr = $.getJSON('http://localhost:3000/restaurants');
+    var $xhr = $.getJSON('http://localhost:3001/restaurants');
     $xhr.done(function(data) {
         if ($xhr.status !== 200) {
             return;
         }
         placeCenter ={lat:40.016705,lng: -105.281401}
         var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 15,
+            zoom: 17,
             center: placeCenter,
             styles: styles,
         });
@@ -32,12 +32,15 @@ function initMap() {
                         $(".mapButton").click(function() {
                             //console.log(`${data[i].name}`);
                             $.ajax({
+                                url: `/favorite/${data[i].id}/${userId}`,
                                 type: "POST",
-                                url: `/favorite/:${userId}`,
-                                data: `/restaurants/${data[i]}`,
-                              });
+                                success: function(response){
+                                    console.log(response);
+                                    $(event.target).closest('.card').remove()
+                                },
+                            });
                         });
-                    }); 
+                    });
                     infowindow.setContent('<div id="content">'+
                         '<div id="siteNotice">'+
                         '</div>'+
@@ -56,12 +59,8 @@ function initMap() {
                     infowindow.open(map, marker);
                 }
             })(marker, i));
+
             }
         }
     })
 }
-
-
-
-
-
