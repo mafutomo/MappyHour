@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-const baseURL = 'http://localhost:3001'
+// const baseURL = 'http://localhost:3001'
 
 $(".signup").submit(function(event) {
     event.preventDefault();
@@ -17,7 +17,7 @@ $(".signup").submit(function(event) {
     }else{
 
     $.ajax({
-    url:   `${baseURL}/users/`,
+    url:   `$/users/`,
     type: 'POST',
     data: {
       firstName: firstName,
