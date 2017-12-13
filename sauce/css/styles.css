@@ -166,7 +166,6 @@ li{
   margin-left: 10%;
   margin-right:10%;
   margin-top: 15%;
-
 }
 
 .side-nav{
@@ -183,19 +182,9 @@ li{
   font-weight: bold;
 }
 
-.mapButton{
-    margin-right: 3px;
-}
-
 #goSign{
   margin-top:-12px;
 }
 .noshowRestaurant{
   display:none;
-}
-
-
-.scroll{
-  overflow: hidden;
-    white-space: nowrap;
 }
