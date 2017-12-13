@@ -59,11 +59,21 @@ const mapToFavorites = (req,res,sendit) =>{
   })
 }
 
+const getName = (req, res, sendit) => {
+  let idForName = req.params.id
+  knex('users').where({id:idForName}).first()
+  .then(data => {
+    res.status(200).send(data.firstName)
+  })
+
+}
+
 module.exports={
 getRestaurants,
 getRestaurantsName,
 putFavorites,
 deleteFavorite,
 myFavePage,
-mapToFavorites
+mapToFavorites,
+getName
 }

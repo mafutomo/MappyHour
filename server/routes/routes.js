@@ -14,6 +14,8 @@ router.get('/restaurants/',queries.getRestaurants)
 
 router.get('/restaurants/:name',queries.getRestaurantsName)
 
+router.get('/user/:id',queries.getName)
+
 router.post('/user/',cryptic.compare)
 
 router.post('/users/',cryptic.store)//no touchy

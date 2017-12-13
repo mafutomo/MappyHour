@@ -17,6 +17,11 @@ width: 100%;
 }
 
 
+nav .brand-logo{
+  margin-left: 10px;
+}
+
+
 .sub-heading{
   font-family: 'Comfortaa', cursive;
   font-weight: bold;
@@ -168,12 +173,10 @@ li{
   margin-top: 15%;
 }
 
-.side-nav{
-  background-image: url('../img/swirl.png') !important;
-}
 
 .side-nav li>a{
-  font-size: 20px !important;
+  font-family: 'Comfortaa', cursive ;
+  font-size: 18px !important;
   font-weight:normal !important;
   margin-top: 15px !important;
 }
@@ -187,4 +190,49 @@ li{
 }
 .noshowRestaurant{
   display:none;
+}
+
+input::placeholder {
+  color: #595959;
+}
+
+
+
+@media (min-width: 768px) {
+
+  .background-login{
+    background-image: url('../img/web_blur.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .background-sign_up{
+    background-image: url('../img/web_blur.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .container{
+    padding-top: 1%;
+    padding-bottom: 2%;
+  }
+
+  .signin{
+    margin-top: 15%;
+  }
+
+  .signup{
+    margin-top: -1%;
+  }
+
+  .text-label{
+    color: white;
+  }
+
+  .sub-heading{
+    color: white;
+  }
+
 }
