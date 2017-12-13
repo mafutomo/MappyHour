@@ -4,13 +4,12 @@
 
 With MappyHour you can view Boulder Happy Hour deals through our interactive map and intuitive interface. Once logged in, you can bookmark multiple restaurants and rate them. You can filter the map to see what Happy Hours are available on specific days or browse through restaurant descriptions, deals, and their contact information.
 
-###### Trello Board: https://trello.com/b/bJ0Vzl8q/g68q2melissa-is-the-best
 Website demo: http://mappyhour.herokuapp.com/
 
 1)  $ git clone  https://github.com/TheRobQ/Q2-Project.git
 2)  $ cd into Q2-Project directory 
 3)  $ npm install 
-4)  $ Creatdb sozc_dev
+4)  $ creatdb sozc_dev
 5)  $ knex migrate:latest
 6)  $ knex seed:run
 7)  Start server with $ node server.js
