@@ -16,6 +16,9 @@ width: 100%;
   background-color: green;
 }
 
+nav .brand-logo{
+  margin-left: 10px;
+}
 
 .sub-heading{
   font-family: 'Comfortaa', cursive;
@@ -187,4 +190,45 @@ li{
 }
 .noshowRestaurant{
   display:none;
+}
+
+
+@media (min-width: 768px) {
+
+  .background-login{
+    background-image: url('../img/web_blur.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .background-sign_up{
+    background-image: url('../img/web_blur.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .container{
+    padding-top: 1%;
+    padding-bottom: 2%;
+  }
+
+  .signin{
+    margin-top: 15%;
+  }
+
+  .signup{
+    margin-top: -1%;
+  }
+
+  .text-label{
+    color: white;
+  }
+
+  .sub-heading{
+    color: white;
+  }
+
+
 }

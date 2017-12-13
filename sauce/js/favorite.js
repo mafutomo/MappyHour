@@ -12,7 +12,7 @@ $( document ).ready(function(){
         // console.log(response);
         // $('#test2').text(response[0].name + response[0].address  + response[0].happyHourMenu)
         for(let i = 0; i < response.length; i++){
-        $('#attach').append(" <div class='col s12 m7'>"+
+        $('#attach').append(" <div class='col s12 m6 l6'>"+
           "<div class='card'>"+
             "<div class='card-stacked'>" +
               "<h5 class='card-title'>"+response[i].name+"</h5>" +
