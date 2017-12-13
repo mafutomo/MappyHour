@@ -17,7 +17,7 @@ $(".signup").submit(function(event) {
     }else{
 
     $.ajax({
-    url:   `$/users/`,
+    url:   `/users`,
     type: 'POST',
     data: {
       firstName: firstName,
