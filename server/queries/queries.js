@@ -12,12 +12,12 @@ const getRestaurants = (req,res,sendit)=>{
     })
   }
 
-const getRestaurantsName = (req,res,sendit)=>{
+const getRestaurantsDay = (req,res,sendit)=>{
   knex('restaurants').where({
-    name: req.params.name
-  }).first()
-  .then(restraunt=>{
-    res.status(200).send(restraunt)
+    name: req.params.day
+  })
+  .then(restraunts=>{
+    res.status(200).send(restraunts)
   })
 }
 
@@ -35,6 +35,7 @@ const deleteFavorite = (req,res,sendit)=>{
 //no touchy
 const myFavePage = (req,res,sendit) => {
     let user = req.params.id;
+    console.log(user);
     return knex('favorites').where('user_id', user).join('restaurants', 'restaurants.id', '=', 'favorites.restaurant_id').select('*').then( (response) => {
       res.status(200).send(response)
     })
@@ -61,7 +62,7 @@ const mapToFavorites = (req,res,sendit) =>{
 
 module.exports={
 getRestaurants,
-getRestaurantsName,
+getRestaurantsDay,
 putFavorites,
 deleteFavorite,
 myFavePage,
