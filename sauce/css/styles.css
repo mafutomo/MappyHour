@@ -16,9 +16,11 @@ width: 100%;
   background-color: green;
 }
 
+
 nav .brand-logo{
   margin-left: 10px;
 }
+
 
 .sub-heading{
   font-family: 'Comfortaa', cursive;
@@ -171,12 +173,10 @@ li{
   margin-top: 15%;
 }
 
-.side-nav{
-  background-image: url('../img/swirl.png') !important;
-}
 
 .side-nav li>a{
-  font-size: 20px !important;
+  font-family: 'Comfortaa', cursive ;
+  font-size: 18px !important;
   font-weight:normal !important;
   margin-top: 15px !important;
 }
@@ -191,6 +191,12 @@ li{
 .noshowRestaurant{
   display:none;
 }
+
+input::placeholder {
+  color: #595959;
+}
+
+
 
 @media (min-width: 768px) {
 
