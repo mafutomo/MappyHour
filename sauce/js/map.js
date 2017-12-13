@@ -12,8 +12,8 @@ function initMap() {
         });
         var marker = undefined;
         var infowindow = new google.maps.InfoWindow( {
-          maxWidth: 233,
-          maxHeight: 155,
+          maxWidth: 195,
+          maxHeight: 100,
         });
         if(data.length > 0){
             for(var i = 0; i<data.length;i++){
@@ -58,7 +58,7 @@ function initMap() {
                         `<a href="${data[i].url}"><h5>Website</h5></a>`+
                         `<a href="${data[i].phonenumber}">${data[i].phonenumber} | </a>`+
                         `<a href="${data[i].address}">${data[i].address}</a>`+
-                        `<button id="mapButton" class="mapButton">| Save location</button>`+
+                        `<button id="mapButton" class="mapButton"> Save Location</button>`+
                         // `<p class='noshowRestaurant'>${data[i].id}<p>`+
                         '</div>'+
                         '</div>'
