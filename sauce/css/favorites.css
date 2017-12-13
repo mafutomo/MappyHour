@@ -59,6 +59,21 @@ p{
   display:none;
 }
 
+nav .brand-logo{
+  margin-left: 10px;
+}
+
+.side-nav li>a{
+  font-family: 'Comfortaa', cursive !important;
+  font-size: 18px !important;
+  font-weight:normal !important;
+  margin-top: 15px !important;
+}
+
+#nameGreeting{
+  background-color: #ffc199;
+}
+
 .card-image{
   clear:left;
   /*margin-top:-12px;*/
@@ -82,8 +97,8 @@ p{
   font-weight: bold;
   color: white !important;
   text-align: center;
-  background-color: #f57c00 !important;
-  border-color: #f57c00 !important;
+    background-color: #f57c00 !important;
+      border-color: #f57c00 !important;
 }
 
 .brand-logo{
