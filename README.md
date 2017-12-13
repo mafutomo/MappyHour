@@ -15,7 +15,7 @@ Website demo: http://mappyhour.herokuapp.com/
 6)  $ knex seed:run
 7)  Start server with $ node server.js
 
-![Alt text](/README_images/wireframe1.png?raw=true)
+![Alt text](/README_images/signup.png?raw=true)
 
 8)  In browser go to http://localhost:3001
 9) At  http://localhost:3001 click on sign up enter a username: email, password: anything make sure passwords match
@@ -23,9 +23,9 @@ Website demo: http://mappyhour.herokuapp.com/
 11) Login with email and password
 
 
-###### Wireframe:
-![Alt text](/README_images/wireframe1.png?raw=true)
-![Alt text](/README_images/wireframe2.png?raw=true)
+###### Map Page:
+![Alt text](/README_images/map.png?raw=true)
 
-###### ERD:
-![Alt text](/README_images/ERD.png?raw=true)
+
+###### Favorite / Log Out Page :
+![Alt text](/README_images/logout.png?raw=true)
