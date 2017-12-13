@@ -12,7 +12,7 @@ function initMap() {
         });
         var marker = undefined;
         var infowindow = new google.maps.InfoWindow( {
-          maxWidth: 195,
+          maxWidth: 210,
           maxHeight: 100,
         });
         if(data.length > 0){
