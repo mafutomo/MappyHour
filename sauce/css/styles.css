@@ -192,6 +192,10 @@ li{
   display:none;
 }
 
+input::placeholder {
+  color: #595959;
+}
+
 @media (min-width: 768px) {
 
   .background-login{
