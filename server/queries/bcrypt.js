@@ -19,11 +19,15 @@ const store = (req,res,sendit)=>{
     res.status(204).send({id:user[0].id})
   })
 }
+
 const compare = (req,res,sendit)=>{
   knex('users').where({
   email: req.body.email
   }).first()
   .then(user=>{
+    if(user ===  undefined){
+      res.sendStatus(404)
+    }
     console.log(user);
     bcrypt.compare(req.body.password, user.password, function(err, ver) {
         ver ? res.status(200).send({id:user.id}): res.sendStatus(401)

@@ -19,7 +19,12 @@ $(document).ready(function() {
         window.location.href = "map.html"
       },
       error: function(data) {
-        console.log('error');
+        console.log(data);
+        if(data .responseText === "Not Found"){
+          console.log(404);
+          Materialize.toast('We don\'t see your email.  Please register.', 6000)
+        }
+        else if(data.responseText === "Unauthorized")
         Materialize.toast('Please check your user name and / or password and try again', 6000)
       },
     })
