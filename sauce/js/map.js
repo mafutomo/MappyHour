@@ -60,7 +60,6 @@ function initMap() {
                         `<a href="${data[i].phonenumber}">${data[i].phonenumber} | </a>`+
                         `<a href="${data[i].address}">${data[i].address}</a>`+
                         `<div id="buttonCenter>"<button id="mapButton" class="mapButton"> Save Location</button></div>`+
-                        // `<p class='noshowRestaurant'>${data[i].id}<p>`+
                         '</div>'+
                         '</div>'
                     );
