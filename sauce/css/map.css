@@ -1,0 +1,29 @@
+h4{
+    font-family: 'Comfortaa', cursive;
+    font-size: 23px !important;
+}
+
+h5{
+  font-family: 'Comfortaa', cursive;
+  font-size: 17px !important;
+
+}
+
+.gm-style-iw{
+  left: 21px !important;
+}
+
+p{
+    font-family: 'Comfortaa', cursive;
+}
+
+#content{
+  background-image: url('../img/swirl.png') !important;
+      text-align: center;
+}
+
+.info_details {
+height:100px
+width: 325px;
+
+}
