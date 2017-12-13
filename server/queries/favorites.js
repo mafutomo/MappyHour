@@ -6,7 +6,7 @@ const updateRating = (restId) => {
   knex.select('rating').from('favorites').where({restaurant_id:restId})
   .then(ratings=>{
     var sum = ratings.map(val => val.rating).reduce((a, b) => Number(a) + Number(b))
-    var avg = (sum+3)/(ratings.length+1)
+    var avg = (sum)/(ratings.length)
     knex('restaurants').where({id:restId}).update({averageRating: avg}).then(count=>{
       return;
     })
