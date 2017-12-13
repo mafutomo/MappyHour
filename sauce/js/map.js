@@ -47,10 +47,10 @@ function initMap() {
                     infowindow.setContent('<div id="content">'+
                         '<div id="siteNotice">'+
                         '</div>'+
-                        `<img id="mapPopUpImage" class="mapPopUpImage" style="width:250px;"src="${data[i].picture}">`+
                         `<h4 id="firstHeading" class="firstHeading">${data[i].name}</h4>`+
+                        `<img id="mapPopUpImage" class="mapPopUpImage" style="width:200px;"src="${data[i].picture}">`+
                         '<div id="bodyContent">'+
-                        `<p><b>${data[i].name}</b>,${data[i].description} </p>`+
+                        `<p>${data[i].description} </p>`+
                         `<h5>Happy Hour Menu</h5><p>${data[i].happyHourMenu}</p>`+
                         `<a href="${data[i].url}"><h5>Website</h5></a>`+
                         `<a href="${data[i].phonenumber}">${data[i].phonenumber}</a>`+
