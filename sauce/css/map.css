@@ -17,6 +17,9 @@ p{
     font-family: 'Comfortaa', cursive;
 }
 
+#buttonCenter{
+  text-align: center;
+}
 #content{
   background-image: url('../img/swirl.png') !important;
       text-align: center;
