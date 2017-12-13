@@ -179,6 +179,9 @@ li{
   margin-top: 15px !important;
 }
 
+.mapMenu{
+  font-weight: bold;
+}
 #goSign{
   margin-top:-12px;
 }

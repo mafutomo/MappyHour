@@ -11,7 +11,10 @@ function initMap() {
             styles: styles,
         });
         var marker = undefined;
-        var infowindow = new google.maps.InfoWindow();
+        var infowindow = new google.maps.InfoWindow( {
+          maxWidth: 233,
+          maxHeight: 155,
+        });
         if(data.length > 0){
             for(var i = 0; i<data.length;i++){
                 var obj = {
@@ -51,11 +54,11 @@ function initMap() {
                         `<img id="mapPopUpImage" class="mapPopUpImage" style="width:200px;"src="${data[i].picture}">`+
                         '<div id="bodyContent">'+
                         `<p>${data[i].description} </p>`+
-                        `<h5>Happy Hour Menu</h5><p>${data[i].happyHourMenu}</p>`+
+                        `<h5 class='mapMenu'>Happy Hour Menu</h5><p>${data[i].happyHourMenu}</p>`+
                         `<a href="${data[i].url}"><h5>Website</h5></a>`+
-                        `<a href="${data[i].phonenumber}">${data[i].phonenumber}</a>`+
-                        `</br></br><a href="${data[i].address}">${data[i].address}</a>`+
-                        `<button id="mapButton" class="mapButton">Save location</button>`+
+                        `<a href="${data[i].phonenumber}">${data[i].phonenumber} | </a>`+
+                        `<a href="${data[i].address}">${data[i].address}</a>`+
+                        `<button id="mapButton" class="mapButton">| Save location</button>`+
                         // `<p class='noshowRestaurant'>${data[i].id}<p>`+
                         '</div>'+
                         '</div>'
