@@ -30,8 +30,11 @@ height:100px
 width: 325px;
 }
 
-
 .mapButton{
   display: block;
   margin-bottom: 3px;
+}
+
+#nameGreeting{
+  background-color: #ffc199;
 }
