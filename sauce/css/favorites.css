@@ -82,6 +82,8 @@ p{
   font-weight: bold;
   color: white !important;
   text-align: center;
+  background-color: #f57c00 !important;
+  border-color: #f57c00 !important;
 }
 
 .brand-logo{
