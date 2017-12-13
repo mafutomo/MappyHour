@@ -53,7 +53,7 @@ $('#attach').on("click", ".removal", function(event){
     success: function(response){
       // console.log(response);
       $(event.target).closest('.card').remove()
-       Materialize.toast('Favorite Removed!', 4000)
+       Materialize.toast('Favorite Removed!', 3500)
     },
   })
 })

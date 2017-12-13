@@ -42,6 +42,7 @@ function initMap() {
                                   },
                                 success: function(response){
                                     // console.log(response);
+                                     Materialize.toast('Favorite added!', 4000)
                                     $(event.target).closest('.card').remove()
                                 },
                             });
