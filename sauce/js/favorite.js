@@ -12,7 +12,7 @@ $( document ).ready(function(){
         // console.log(response);
         // $('#test2').text(response[0].name + response[0].address  + response[0].happyHourMenu)
         for(let i = 0; i < response.length; i++){
-        $('#attach').append(" <div class='col s12 m6 l6'>"+
+        $('#attach').append(" <div class='col s12 m6 l4'>"+
           "<div class='card'>"+
             "<div class='card-stacked'>" +
               "<h5 class='card-title'>"+response[i].name+"</h5>" +
@@ -22,21 +22,20 @@ $( document ).ready(function(){
             "<div class='card-content'>" +
               "<p class='flow-text'>"+response[i].description+"<p>"+
               "<p>"+response[i].address+"</p>"+
-              "<p>"+response[i].phonenumber+"</p>"+"<br>"+
+              "<p>"+response[i].phonenumber+"</p>"+
+              "<p><span class='bold'>Average rating: </span>" + response[i].averageRating +"</p>"+"</br>"+
+              "<p class='smaller'>"+response[i].happyHourMenu+"<p><br>"+
+              "<p class='noshowUser'>"+response[i].user_id+"<p>"+
+              "<p class='noshowRestaurant'>"+response[i].restaurant_id+"<p>"+
               `<form id="addRate"><fieldset class="rating">
-              <legend>Please rate:</legend>
               <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!"></label>
               <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good"></label>
               <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh"></label>
               <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad"></label>
               <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time"></label>
-              <button class="btn btn-default">submit</button>
+              <button class="btn-floating btn-small waves-effect waves-light red">rate</button>
               </fieldset></form>`+
-              "<p>"+response[i].happyHourMenu+"<p><br>"+
-              "<p class='noshowUser'>"+response[i].user_id+"<p>"+
-              "<p class='noshowRestaurant'>"+response[i].restaurant_id+"<p>"+
-              "<p class='flow-text'>" + response[i].averageRating +
-              "</div>" +
+              "</div>" +"</br>" +
               "<div class='card-action'>"+
               "<button class='removal'><i class='small material-icons'>delete</i></button>" +
               "</div>"+
@@ -93,8 +92,8 @@ $(document).on('submit','#addRate',function(event){
   event.preventDefault();
   var restId = $(event.target).closest('.card').find('.noshowRestaurant').text()
   console.log(rating)
-  console.log(userId)
-  console.log(restId)
+  //console.log(userId)
+  //console.log(restId)
   $.ajax({
     url: `/favorites/`,
     type: 'PUT',
@@ -104,6 +103,7 @@ $(document).on('submit','#addRate',function(event){
       restId
     },
     success: function(response){
+
        console.log(response);
     },
   })

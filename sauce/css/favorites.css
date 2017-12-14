@@ -21,6 +21,14 @@ p{
   text-align: left;
 }
 
+.bold{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+
+.smaller{
+  font-size: small;
+}
 .side-nav{
   background-image: url('../img/swirl.png') !important;
 }
@@ -158,3 +166,24 @@ body{ margin: 20px; }
 .rating > input:checked ~ label:hover,
 .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
 .rating > input:checked ~ label:hover ~ label { color: #FFED85 !important;  }
+
+
+button.btn-floating {
+  display: inline-block;
+  margin-top: -6px !important;
+  margin-right: 32px;
+}
+
+@media screen and (max-width: 1900px) and (min-width: 700px){
+.card-content{
+  min-height: 320px !important;
+  max-height:320px !important;
+  overflow: auto !important;
+}
+
+img{
+  display: block;
+  max-height: 250px;
+  clear:both;
+}
+}

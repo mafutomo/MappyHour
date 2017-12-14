@@ -2,7 +2,7 @@ $( document ).ready(function(){
 
   const userId = localStorage.getItem("user");
 
-  console.log(userId);
+  //console.log(userId);
 
 
   $('body').ready(function(event){
@@ -11,7 +11,7 @@ $( document ).ready(function(){
       url: `/user/${userId}`,
       type: 'GET',
       success: function(response){
-    
+
         $('#nameText').html(`Hello, ${response}`)
       }
     })
