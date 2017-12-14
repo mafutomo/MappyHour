@@ -171,19 +171,20 @@ body{ margin: 20px; }
 button.btn-floating {
   display: inline-block;
   margin-top: -6px !important;
-  margin-right: 32px;
+  margin-right: 39px;
 }
 
-@media screen and (max-width: 1900px) and (min-width: 700px){
+@media screen and (min-width: 700px){
 .card-content{
-  min-height: 320px !important;
-  max-height:320px !important;
+  min-height: 300px !important;
+  max-height:300px !important;
   overflow: auto !important;
 }
 
 img{
   display: block;
   max-height: 250px;
+  min-height: 250px;
   clear:both;
 }
 }

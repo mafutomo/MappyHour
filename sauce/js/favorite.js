@@ -15,7 +15,7 @@ $( document ).ready(function(){
         $('#attach').append(" <div class='col s12 m6 l4'>"+
           "<div class='card'>"+
             "<div class='card-stacked'>" +
-              "<h5 class='card-title'>"+response[i].name+"</h5>" +
+              "<h5 class='card-title truncate'>"+response[i].name+"</h5>" +
             "<div class='card-image'>"+
             "<img src='"+response[i].picture+"'>" +
             "</div>"+
@@ -103,7 +103,7 @@ $(document).on('submit','#addRate',function(event){
       restId
     },
     success: function(response){
-
+      Materialize.toast('Your rating was added!', 4000)
        console.log(response);
     },
   })
