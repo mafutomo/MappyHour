@@ -1,73 +1,61 @@
-/*.grid{
-  height: auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas:
-  "header header header"
-  "content content content"
-}*/
-#map{
-height: 700px;
-width: 100%;
+#map {
+  height: 700px;
+  width: 100%;
 }
-#card{
+
+#card {
   height: 200px;
   width: 100%;
   background-color: green;
 }
 
-
-nav .brand-logo{
+nav .brand-logo {
   margin-left: 10px;
 }
 
-
-.sub-heading{
+.sub-heading {
   font-family: 'Comfortaa', cursive;
   font-weight: bold;
   text-align: center;
   font-size: 135%;
-  margin-top:-15px;
+  margin-top: -15px;
 }
 
-.noshowRestaurant{
-  display:none;
+.noshowRestaurant {
+  display: none;
 }
 
-.text-label{
+.text-label {
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   /* font-family: 'Comfortaa', cursive; */
   color: black;
   font-size: 150%;
-
 }
 
-p{
+p {
   font-family: 'Open Sans', sans-serif;
 }
 
-.background-login{
+.background-login {
   background-image: url('../img/CoverImabge.jpg');
   background-size: 124%;
   background-repeat: no-repeat;
 }
 
-.background-sign_up{
+.background-sign_up {
   background-image: url('../img/CoverImabge_copy.jpg');
   background-size: 124%;
   background-repeat: no-repeat;
-
 }
 
-.background-subtle{
+.background-subtle {
   background-image: url('../img/swirl.png') !important;
 }
 
-.heading{
+.heading {
   margin-top: -10px;
   color: #ffa83f;
-  /*font-family: 'Oswald', sans-serif;*/
   font-family: 'Hammersmith One', sans-serif;
   font-size: 400%;
   text-align: center;
@@ -78,11 +66,11 @@ p{
   font-family: 'Hammersmith One';
 }
 
-li{
+li {
   font-family: 'Open Sans', sans-serif;
 }
 
-.heading_sign_up{
+.heading_sign_up {
   margin-top: 25px;
   color: #ffa83f;
   font-family: 'Hammersmith One', sans-serif;
@@ -92,7 +80,7 @@ li{
 }
 
 .input {
-  background-color: rgba(255,255,255,.7) !important;
+  background-color: rgba(255, 255, 255, .7) !important;
   border-width: 2px !important;
   border-style: none !important;
   border-radius: 22px !important;
@@ -100,23 +88,22 @@ li{
   margin-bottom: 14px !important;
   align-items: center !important;
   width: 250px !important;
-  height:25px !important;
+  height: 25px !important;
   padding: 5px !important;
   padding-left: 17px !important;
-  font-family: 'Open Sans', sans-serif  !important;
+  font-family: 'Open Sans', sans-serif !important;
   color: black !important;
 }
 
-.content{
+.content {
   text-align: center;
   margin-top: 30px;
 }
 
-.heading{
-    margin-top: 30px !important;
-    text-align: center;
+.heading {
+  margin-top: 30px !important;
+  text-align: center;
 }
-
 
 .btn-primary {
   background-color: #49b6ff;
@@ -128,111 +115,96 @@ li{
   border-radius: 22px;
   box-shadow: 2px 2px 8px #413F3F;
   width: 262px;
-  height:52px;
+  height: 52px;
   padding: 5px;
   margin-top:
 }
 
-.submit-btn{
+.submit-btn {
   margin-top: 20px !important;
 }
 
-
 .btn-primary {
-    height:40px;
-    margin-top: 10px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.5s;
-
+  height: 40px;
+  margin-top: 10px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.5s;
 }
 
 .btn-primary:hover {
-    background-color: #3290CE; /* Green */
-    color: white;
+  background-color: #3290CE;
+  color: white;
 }
 
-
-.submitPage
-{
+.submitPage {
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   color: white;
   font-size: large;
 }
 
-.signin{
+.signin {
   margin-left: 10%;
-  margin-right:10%;
+  margin-right: 10%;
   margin-top: 75%;
-
 }
 
-.signup{
+.signup {
   margin-left: 10%;
-  margin-right:10%;
+  margin-right: 10%;
   margin-top: 15%;
 }
 
-
-.side-nav li>a{
-  font-family: 'Comfortaa', cursive ;
+.side-nav li>a {
+  font-family: 'Comfortaa', cursive;
   font-size: 18px !important;
-  font-weight:normal !important;
+  font-weight: normal !important;
   margin-top: 15px !important;
 }
 
-.mapMenu{
+.mapMenu {
   font-weight: bold;
 }
 
-#goSign{
-  margin-top:-12px;
+#goSign {
+  margin-top: -12px;
 }
-.noshowRestaurant{
-  display:none;
+
+.noshowRestaurant {
+  display: none;
 }
 
 input::placeholder {
   color: #595959;
 }
 
-
-
 @media (min-width: 768px) {
-
-  .background-login{
+  .background-login {
     background-image: url('../img/web_blur.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
   }
-
-  .background-sign_up{
+  .background-sign_up {
     background-image: url('../img/web_blur.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
   }
-
-  .container{
+  .container {
     padding-top: 1%;
     padding-bottom: 2%;
   }
-
-  .signin{
+  .signin {
     margin-top: 15%;
   }
-
-  .signup{
+  .signup {
     margin-top: -1%;
   }
-
-  .text-label{
+  .text-label {
     color: white;
   }
-
-  .sub-heading{
+  .sub-heading {
     color: white;
   }
-
 }

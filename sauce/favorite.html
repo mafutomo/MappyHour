@@ -1,77 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title class = "heading">MappyHour</title>
-      <!-- Google Fonts -->
-      <link href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Oswald:600" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
-      <!-- Materialize Icons -->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-      <!-- Materialize -->
-      <!-- Custom Stylesheet and Javascript -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title class="heading">MappyHour</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:600" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
+  <!-- Materialize Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Materialize -->
+  <!-- Custom Stylesheet and Javascript -->
+  <link rel="stylesheet" href="./css/favorites.css">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <!-- stars-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 
-      <link rel="stylesheet" href="./css/favorites.css">
-      <!-- Compiled and minified CSS -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-      <!-- stars-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-
-    <body class ="background-subtle">
-        <!-- Navbar -->
+<body class="background-subtle">
+  <!-- Navbar -->
   <div class="navbar-fixed">
-        <nav style="background-color: #f57c00;">
-        <div class="nav-wrapper">
+    <nav style="background-color: #f57c00;">
+      <div class="nav-wrapper">
         <a href="#!" class="brand-logo" style="font-family: 'Hammersmith One';">MappyHour</a>
-
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-
         <ul class="right hide-on-med-and-down">
           <li><a href="map.html">View Map</a></li>
           <li class="logout"><a href="index.html">Log Out</a></li>
         </ul>
-        </div>
-        </nav>
-
       </div>
-
-        <ul class="side-nav" id="mobile-demo">
-          <li id= "nameGreeting"><a id="nameText"></a></li>
-          <li><a href="map.html">View Map</a></li>
-            <li class="logout"><a href="index.html">Log Out</a></li>
-        </ul>
-
-        <!--End Navbar -->
-
-
-
+    </nav>
+  </div>
+  <ul class="side-nav" id="mobile-demo">
+    <li id="nameGreeting"><a id="nameText"></a></li>
+    <li><a href="map.html">View Map</a></li>
+    <li class="logout"><a href="index.html">Log Out</a></li>
+  </ul>
+  <!--End Navbar -->
   <div class="container">
     <div class="row">
-
-
-    <!-- <h2 class='sub-heading'>My Favorites</h2> -->
-    <!-- <button id="test">click me</button> -->
-    <!-- <button class="removal">clicker test</button> -->
-  <p id="attach"></p>
+      <p id="attach"></p>
     </div>
   </div>
+  <!-- jQuery  -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="./js/styles.js"></script>
+  <script src="./js/favorite.js"></script>
+  <script src="./js/navbar.js"></script>
+  <script src="./js/logout.js"></script>
+</body>
 
-
-
-        <!-- jQuery  -->
-        <script
-        src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-        <script src="./js/styles.js"></script>
-        <script src="./js/favorite.js"></script>
-        <script src="./js/navbar.js"></script>
-        <script src="./js/logout.js"></script>
-    </body>
 </html>

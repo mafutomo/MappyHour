@@ -1,130 +1,135 @@
 html {
-    font-family: 'Open Sans', sans-serif, 'Comfortaa', cursive;
-  }
+  font-family: 'Open Sans', sans-serif, 'Comfortaa', cursive;
+}
 
-h5{
+h5 {
   font-family: 'Comfortaa', cursive;
-  font-weight:bold;
+  font-weight: bold;
   font-size: 110%;
   text-align: center;
   margin-top: 12px !important;
 }
- h2{
-   font-family:font-family: 'Open Sans'
-   font-weight:600;
-   font-size: 300%;
-   text-align:center;
- }
 
-p{
+h2 {
+  font-family: font-family: 'Open Sans' font-weight:600;
+  font-size: 300%;
+  text-align: center;
+}
+
+p {
   font-family: 'Open Sans', sans-serif;
   text-align: left;
 }
 
-.bold{
+.bold {
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
 }
 
-.smaller{
+.smaller {
   font-size: small;
 }
-.side-nav{
+
+.side-nav {
   background-image: url('../img/swirl.png') !important;
 }
-/* add this */
 
-.flow-text{
+.flow-text {
   font-size: 20px !important;
 }
 
-.side-nav li>a{
+.side-nav li>a {
   font-size: 20px !important;
-  font-weight:normal !important;
+  font-weight: normal !important;
   margin-top: 15px !important;
 }
-/* add this */
-.background-subtle{
+
+.background-subtle {
   background-image: url('../img/swirl.png') !important;
 }
 
-.sub-heading{
+.sub-heading {
   font-family: 'Comfortaa', cursive !important;
   font-weight: bold;
   text-align: center;
   font-size: 300%;
 }
 
-.card{
+.card {
   margin-top: 30px !important;
 }
 
-.noshowUser{
-  display:none;
+.noshowUser {
+  display: none;
 }
 
-.noshowRestaurant{
-  display:none;
+.noshowRestaurant {
+  display: none;
 }
 
-nav .brand-logo{
+nav .brand-logo {
   margin-left: 10px;
 }
 
-.side-nav li>a{
+.side-nav li>a {
   font-family: 'Comfortaa', cursive !important;
   font-size: 18px !important;
-  font-weight:normal !important;
+  font-weight: normal !important;
   margin-top: 15px !important;
 }
 
-#nameGreeting{
+#nameGreeting {
   background-color: #ffc199;
 }
 
-.card-image{
-  clear:left;
+.card-image {
+  clear: left;
   /*margin-top:-12px;*/
-  margin-right:3px;
+  margin-right: 3px;
   margin-left: 3px;
   margin-bottom: 1px;
 }
 
-.card-stacked{
+.card-stacked {
   padding-top: 3px;
-
 }
 
-.card-action{
+.card-action {
   background-color: #f57c00 !important;
   text-align: center;
 }
 
-.removal{
+.removal {
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   color: white !important;
   text-align: center;
-    background-color: #f57c00 !important;
-      border-color: #f57c00 !important;
+  background-color: #f57c00 !important;
+  border-color: #f57c00 !important;
 }
 
-.brand-logo{
-  font-variant:normal !important;
-  /* font-size: 35px !important; */
+.brand-logo {
+  font-variant: normal !important;
 }
 
-.card .card-action{
+.card .card-action {
   padding: 10px 27px !important;
 }
 
-.brand-logo{
+.brand-logo {
   font-variant: normal;
 }
-@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 
-fieldset, label { margin: 0 !important; padding: 0 !important;}
-body{ margin: 20px; }
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+fieldset, label {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body {
+  margin: 20px;
+}
+
 /****** Style Star Rating Widget *****/
 
 .rating {
@@ -132,8 +137,11 @@ body{ margin: 20px; }
   float: left !important;
 }
 
-.rating > input { display: none!important; }
-.rating > label:before {
+.rating>input {
+  display: none!important;
+}
+
+.rating>label:before {
   margin: 5px !important;
   font-size: 1.25em !important;
   font-family: FontAwesome !important;
@@ -141,32 +149,30 @@ body{ margin: 20px; }
   content: "\f005" !important;
 }
 
-.rating > .half:before {
+.rating>.half:before {
   content: "\f089"!important;
   position: absolute!important;
 }
 
-.rating > label {
+.rating>label {
   color: #ddd!important;
- float: right!important;
+  float: right!important;
 }
-[type="radio"]+label:before, [type="radio"]+label:after{
+
+[type="radio"]+label:before, [type="radio"]+label:after {
   display: none;
   border: 0px solid #5a5a5a !important;
   position: relative !important;
 }
-/***** CSS Magic to Highlight Stars on Hover *****/
 
-.rating > input:checked ~ label, /* show gold star when clicked */
-.rating:not(:checked) > label:hover, /* hover current star */
-.rating:not(:checked) > label:hover ~ label { color: #FFD700 !important;
-                                              margin-left: 7px;} /* hover previous stars in list */
+.rating>input:checked~label, .rating:not(:checked)>label:hover, .rating:not(:checked)>label:hover~label {
+  color: #FFD700 !important;
+  margin-left: 7px;
+}
 
-.rating > input:checked + label:hover, /* hover current star when changing rating */
-.rating > input:checked ~ label:hover,
-.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
-.rating > input:checked ~ label:hover ~ label { color: #FFED85 !important;  }
-
+.rating>input:checked+label:hover, .rating>input:checked~label:hover, .rating>label:hover~input:checked~label, .rating>input:checked~label:hover~label {
+  color: #FFED85 !important;
+}
 
 button.btn-floating {
   display: inline-block;
@@ -174,17 +180,16 @@ button.btn-floating {
   margin-right: 39px;
 }
 
-@media screen and (min-width: 700px){
-.card-content{
-  min-height: 300px !important;
-  max-height:300px !important;
-  overflow: auto !important;
-}
-
-img{
-  display: block;
-  max-height: 250px;
-  min-height: 250px;
-  clear:both;
-}
+@media screen and (min-width: 700px) {
+  .card-content {
+    min-height: 300px !important;
+    max-height: 300px !important;
+    overflow: auto !important;
+  }
+  img {
+    display: block;
+    max-height: 250px;
+    min-height: 250px;
+    clear: both;
+  }
 }
