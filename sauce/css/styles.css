@@ -181,13 +181,13 @@ input::placeholder {
 @media (min-width: 768px) {
   .background-login {
     background-image: url('../img/web_blur.jpeg');
-    background-size: cover;
+    background-size: 1700px;
     background-repeat: no-repeat;
     background-position: center center;
   }
   .background-sign_up {
     background-image: url('../img/web_blur.jpeg');
-    background-size: cover;
+    background-size: 1700px;
     background-repeat: no-repeat;
     background-position: center center;
   }
