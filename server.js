@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({
 app.use('/', router)
 
 app.listen(port, () => {
-  console.log(`you are now tunned to ${port} "the bees knees"`)
+  console.log(`you are now tuned to ${port} "the bees knees"`)
 })
 
 module.exports = app;
